@@ -23,7 +23,7 @@ import {
   PiImageDuotone,
 } from "react-icons/pi";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaWindows } from "react-icons/fa6";
 
 // Create image-based icons that integrate with the IconProvider API
 const createImageIcon = (src: string, alt: string): IconType => (props: IconBaseProps) => {
@@ -65,6 +65,7 @@ export const iconLibrary: Record<string, IconType> = {
   linkedin: FaLinkedin,
   x: FaX,
   threads: FaThreads,
+  windows: FaWindows,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
