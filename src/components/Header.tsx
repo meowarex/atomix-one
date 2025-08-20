@@ -77,59 +77,49 @@ export const Header = () => {
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
               {routes["/about"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="person"
-                    href="/about"
-                    selected={pathname === "/about"}
-                  />
-                </>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon="person"
+                  href="/about"
+                  selected={pathname === "/about"}
+                />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/alkaline"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="alkaline"
-                    href="/alkaline"
-                    label={alkaline.label}
-                    selected={pathname.startsWith("/alkaline")}
-                  />
-                </>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon="alkaline"
+                  href="/alkaline"
+                  label={alkaline.label}
+                  selected={pathname.startsWith("/alkaline")}
+                />
               )}
               {routes["/ruby"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="ruby"
-                    href="/ruby"
-                    label={ruby.label}
-                    selected={pathname.startsWith("/ruby")}
-                  />
-                </>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon="ruby"
+                  href="/ruby"
+                  label={ruby.label}
+                  selected={pathname.startsWith("/ruby")}
+                />
               )}
               {routes["/sapphire"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="sapphire"
-                    href="/sapphire"
-                    label={sapphire.label}
-                    selected={pathname.startsWith("/sapphire")}
-                  />
-                </>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon="sapphire"
+                  href="/sapphire"
+                  label={sapphire.label}
+                  selected={pathname.startsWith("/sapphire")}
+                />
               )}
               {routes["/amethyst"] && (
-                <>
-                  <ToggleButton
-                    className="s-flex-hide"
-                    prefixIcon="amethyst"
-                    href="/amethyst"
-                    label={amethyst.label}
-                    selected={pathname.startsWith("/amethyst")}
-                  />
-                </>
+                <ToggleButton
+                  className="s-flex-hide"
+                  prefixIcon="amethyst"
+                  href="/amethyst"
+                  label={amethyst.label}
+                  selected={pathname.startsWith("/amethyst")}
+                />
               )}
               {display.themeSwitcher && (
                 <>
