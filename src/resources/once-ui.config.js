@@ -112,7 +112,7 @@ const meta = {
     title: "Atomix",
     description:
       "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
-    image: "/images/og/home.jpg",
+    image: "/images/og/home.png",
     canonical: "https://atomix.one",
     robots: "index,follow",
     alternates: [{ href: "https://atomix.one", hrefLang: "en" }],
