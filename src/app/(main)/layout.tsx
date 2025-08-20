@@ -5,7 +5,7 @@ import '@/resources/custom.css'
 import classNames from "classnames";
 
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
-import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background, Particle} from "@once-ui-system/core";
+import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background, Particle, StyleOverlay, Row, IconButton} from "@once-ui-system/core";
 import { Providers } from '@/components/Providers';
 import { Header } from '@/components/Header';
 
@@ -108,7 +108,7 @@ export default function RootLayout({
         />
       </head>
       <Providers>
-        <Column as="body" background="page" fillWidth margin="0" padding="0" position="relative">
+      <Column as="body" background="page" fillWidth margin="0" padding="0" position="relative">
           <Background
             position="absolute"
             mask={{
@@ -155,12 +155,12 @@ export default function RootLayout({
           <Particle
           position="absolute"
           interactive
-          density={70}
+          density={65}
           size='2'
           speed={1}
           interactionRadius={10}
           opacity={50}
-        />
+          />
           {children}
         </Column>
       </Providers>

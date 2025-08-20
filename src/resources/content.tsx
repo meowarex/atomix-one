@@ -34,33 +34,33 @@ const about: RouteMeta = {
   description: `About ${person.firstName}`,
 };
 
-const blog: RouteMeta = {
-  path: "/blog",
-  label: "Blog",
-  title: `Blog – ${person.firstName}`,
-  description: `Writing by ${person.firstName}`,
+const alkaline: RouteMeta = {
+  path: "/alkaline",
+  label: "Alkaline",
+  title: `Alkaline – ${person.firstName}`,
+  description: `Alkaline by ${person.firstName}`,
 };
 
-const work: RouteMeta = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.firstName}`,
-  description: `Projects by ${person.firstName}`,
+const ruby: RouteMeta = {
+  path: "/ruby",
+  label: "Ruby",
+  title: `Ruby – ${person.firstName}`,
+  description: `Ruby by ${person.firstName}`,
 };
 
-const gallery: RouteMeta = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Gallery – ${person.firstName}`,
-  description: `Photos by ${person.firstName}`,
+const sapphire: RouteMeta = {
+  path: "/sapphire",
+  label: "Sapphire",
+  title: `Sapphire – ${person.firstName}`,
+  description: `Sapphire by ${person.firstName}`,
 };
 
 const routes: Record<string, boolean> = {
   "/": true,
   "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/alkaline": true,
+  "/ruby": true,
+  "/sapphire": true,
 };
 
 const display = {
@@ -69,6 +69,6 @@ const display = {
   themeSwitcher: true,
 };
 
-export { person, home, about, blog, work, gallery, routes, display };
+export { person, home, about, alkaline, ruby, sapphire, routes, display };
 
 

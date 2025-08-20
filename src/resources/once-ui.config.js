@@ -42,12 +42,12 @@ const style = {
   neutral: "gray", // sand | gray | slate
   brand: "pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "inverse", // color | contrast | inverse
+  solid: "color", // color | contrast | inverse
   solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
-  scaling: "100", // 90 | 95 | 100 | 105 | 110
+  scaling: "110", // 90 | 95 | 100 | 105 | 110
 };
 
 const dataStyle = {
@@ -69,7 +69,7 @@ const effects = {
     cursor: true,
     x: 50,
     y: 0,
-    radius: 60,
+    radius: 30,
   },
   gradient: {
     display: true,
@@ -80,7 +80,7 @@ const effects = {
     tilt: 0,
     colorStart: "brand-background-strong",
     colorEnd: "static-transparent",
-    opacity: 50,
+    opacity: 100,
   },
   dots: {
     display: false,

@@ -1,3 +1,4 @@
+import React from "react";
 import { IconType } from "react-icons";
 
 import {
@@ -24,6 +25,26 @@ import {
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads } from "react-icons/fa6";
 
+// Create image-based icons that integrate with the IconProvider API
+const createImageIcon = (src: string, alt: string): IconType => (props: any) => {
+  const size = typeof props?.size === "number" ? `${props.size}px` : props?.size || "1em";
+  return React.createElement("img", {
+    src,
+    alt,
+    style: {
+      width: size,
+      height: size,
+      display: "inline-block",
+      objectFit: "contain",
+    },
+  });
+};
+
+const HomeBrandIcon = createImageIcon("/images/brand/atomix.png", "Home");
+const AlkalineIcon = createImageIcon("/images/products/alkaline.png", "Alkaline");
+const RubyIcon = createImageIcon("/images/products/alkaline.png", "Ruby");
+const SapphireIcon = createImageIcon("/images/products/sapphire.png", "Sapphire");
+
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
   arrowRight: HiArrowRight,
@@ -46,6 +67,11 @@ export const iconLibrary: Record<string, IconType> = {
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
+  // Image-based icons
+  homeBrand: HomeBrandIcon,
+  alkaline: AlkalineIcon,
+  ruby: RubyIcon,
+  sapphire: SapphireIcon,
 };
 
 export type IconLibrary = typeof iconLibrary;

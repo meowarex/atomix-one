@@ -3,9 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
+import { Fade, Flex, IconButton, Line, Row, StyleOverlay, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, gallery } from "@/resources";
+import { routes, display, person, about, alkaline, ruby, sapphire } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -25,9 +25,9 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" })
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
-        hour12: false,
+        hour12: true,
       };
-      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
+      const timeString = new Intl.DateTimeFormat(locale, options).format(now).toLowerCase();
       setCurrentTime(timeString);
     };
 
@@ -76,48 +76,47 @@ export const Header = () => {
               {routes["/"] && (
                 <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
                     prefixIcon="person"
                     href="/about"
-                    label={about.label}
                     selected={pathname === "/about"}
                   />
                 </>
               )}
-              {routes["/work"] && (
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              {routes["/alkaline"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="grid"
-                    href="/work"
-                    label={work.label}
-                    selected={pathname.startsWith("/work")}
+                    prefixIcon="alkaline"
+                    href="/alkaline"
+                    label={alkaline.label}
+                    selected={pathname.startsWith("/alkaline")}
                   />
                 </>
               )}
-              {routes["/blog"] && (
+              {routes["/ruby"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="book"
-                    href="/blog"
-                    label={blog.label}
-                    selected={pathname.startsWith("/blog")}
+                    prefixIcon="ruby"
+                    href="/ruby"
+                    label={ruby.label}
+                    selected={pathname.startsWith("/ruby")}
                   />
                 </>
               )}
-              {routes["/gallery"] && (
+              {routes["/sapphire"] && (
                 <>
                   <ToggleButton
                     className="s-flex-hide"
-                    prefixIcon="gallery"
-                    href="/gallery"
-                    label={gallery.label}
-                    selected={pathname.startsWith("/gallery")}
+                    prefixIcon="sapphire"
+                    href="/sapphire"
+                    label={sapphire.label}
+                    selected={pathname.startsWith("/sapphire")}
                   />
                 </>
               )}

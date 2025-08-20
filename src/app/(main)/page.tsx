@@ -9,6 +9,9 @@ import {
   Logo,
   Line,
   LetterFx,
+  Row,
+  StyleOverlay,
+  IconButton,
 } from "@once-ui-system/core";
 
 export default function Home() {
@@ -20,13 +23,11 @@ export default function Home() {
           border="neutral-alpha-medium"
           onBackground="neutral-medium"
           vertical="center"
-          gap="16"
+          gap="0"
         >
-          <Logo dark icon="/trademarks/wordmark-dark.svg" href="https://atomix.one" size="xs" />
-          <Logo light icon="/trademarks/wordmark-light.svg" href="https://atomix.one" size="xs" />
           <Line vert background="neutral-alpha-strong" />
           <Text marginX="4">
-            <LetterFx trigger="instant">An ecosystem, not a UI kit</LetterFx>
+            <LetterFx trigger="instant" speed="medium">Where would you like to go?</LetterFx>
           </Text>
         </Badge>
         <Heading variant="display-strong-xl" marginTop="24">
