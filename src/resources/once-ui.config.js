@@ -42,6 +42,15 @@ const style = {
   neutral: "gray", // sand | gray | slate
   brand: "pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  // Per-card accent/brand scheme overrides (use with data-accent / data-brand)
+  card1color1: "pink",    // accent scheme for card 1
+  card1color2: "magenta", // brand scheme for card 1
+  card2color1: "violet",  // accent scheme for card 2
+  card2color2: "indigo",  // brand scheme for card 2
+  card3color1: "red",     // accent scheme for card 3
+  card3color2: "orange",  // brand scheme for card 3
+  card4color1: "aqua",    // accent scheme for card 4
+  card4color2: "blue",    // brand scheme for card 4
   solid: "color", // color | contrast | inverse
   solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative

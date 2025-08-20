@@ -1,6 +1,23 @@
 "use client";
 
-import { Text, Button, Column, Badge, Line, LetterFx, Row, Card, Flex, Tag, Icon } from "@once-ui-system/core";
+import {
+  Text,
+  Button,
+  Column,
+  Badge,
+  Line,
+  LetterFx,
+  Row,
+  Card,
+  Flex,
+  Tag,
+  Icon,
+  Background,
+} from "@once-ui-system/core";
+import { style } from "@/resources";
+import type { CSSProperties } from "react";
+
+const cssVars = (vars: Record<string, string>): CSSProperties => vars as unknown as CSSProperties;
 
 export default function Home() {
   return (
@@ -15,127 +32,373 @@ export default function Home() {
         >
           <Line vert background="neutral-alpha-strong" />
           <Text marginX="4">
-            <LetterFx trigger="instant" speed="medium">Where would you like to go?</LetterFx>
+            <LetterFx trigger="instant" speed="medium">
+              Where would you like to go?
+            </LetterFx>
           </Text>
         </Badge>
         <Column fillWidth gap="16">
           <Row fillWidth gap="16" s={{ direction: "column" }}>
             <Flex flex={3}>
-            <Card
+              <Card
                 fillWidth
-                padding="20"
+                padding="0"
                 background="surface"
                 border="neutral-alpha-weak"
                 radius="l-4"
                 shadow="l"
                 direction="column"
+                position="relative"
+                overflow="hidden"
               >
-                <Badge id="badge-6" marginBottom="16" paddingY="4" paddingLeft="4" paddingRight="16" radius="m" gap="12" textVariant="label-default-s" border="neutral-medium" background="neutral-alpha-weak">
-                  <Tag>
-                    <Icon name="alkaline" size="xs" paddingTop="2" margin="0"/>
-                  </Tag>
-                  <Text onBackground="neutral-medium" size="m">Alkaline</Text>
-                </Badge>
-                <Column fillWidth gap="16">
-                <Row>
-                    <Text onBackground="success-medium">Row 1</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 2</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 3</Text>
-                  </Row>
-                </Column>
+                <Background
+                  position="absolute"
+                  fill
+                  fillWidth
+                  fillHeight
+                  data-brand={style.card1color1}
+                  style={cssVars({ '--brand-background-strong': '#de008e' })}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 0,
+                    colorStart: "brand-background-strong",
+                    colorEnd: "static-transparent",
+                  }}
+                  lines={{
+                    display: false,
+                    opacity: 100,
+                    size: "16",
+                    thickness: 1,
+                    angle: 90,
+                    color: "accent-background-strong",
+                  }}
+                  dots={{
+                    display: true,
+                    opacity: 100,
+                    size: "4",
+                    color: "page-background",
+                  }}
+                />
+                <Background
+                  position="absolute"
+                  fill
+                  height={16}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 100,
+                    width: 50,
+                    colorStart: "page-background",
+                    colorEnd: "static-transparent",
+                  }}
+                />
+                <Flex zIndex={1} padding="20" direction="column">
+                  <Badge
+                    id="badge-6"
+                    marginBottom="16"
+                    paddingY="4"
+                    paddingLeft="4"
+                    paddingRight="16"
+                    radius="m"
+                    gap="12"
+                    textVariant="label-default-s"
+                    border="neutral-medium"
+                    background="neutral-alpha-weak"
+                  >
+                    <Tag>
+                      <Icon name="alkaline" size="xs" paddingTop="2" margin="0" />
+                    </Tag>
+                    <Text onBackground="neutral-medium" size="m">
+                      Alkaline
+                    </Text>
+                  </Badge>
+                  <Column fillWidth gap="16">
+                    <Row>
+                      <Text onBackground="success-medium">Row 1</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 2</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 3</Text>
+                    </Row>
+                  </Column>
+                </Flex>
               </Card>
             </Flex>
             <Flex flex={2}>
-            <Card
+              <Card
                 fillWidth
-                padding="20"
+                padding="0"
                 background="surface"
                 border="neutral-alpha-weak"
                 radius="l-4"
                 shadow="l"
                 direction="column"
+                position="relative"
+                overflow="hidden"
               >
-                <Badge id="badge-6" marginBottom="16" paddingY="4" paddingLeft="4" paddingRight="16" radius="m" gap="12" textVariant="label-default-s" border="neutral-medium" background="neutral-alpha-weak">
-                  <Tag>
-                    <Icon name="ruby" size="xs" paddingTop="2" margin="0"/>
-                  </Tag>
-                  <Text onBackground="neutral-medium" size="m">Ruby</Text>
-                </Badge>
-                <Column fillWidth gap="16">
-                <Row>
-                    <Text onBackground="success-medium">Row 1</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 2</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 3</Text>
-                  </Row>
-                </Column>
+                <Background
+                  position="absolute"
+                  fill
+                  fillWidth
+                  fillHeight
+                  data-brand={style.card2color1}
+                  style={cssVars({ '--brand-background-strong': '#6a00ff' })}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 0,
+                    colorStart: "brand-background-strong",
+                    colorEnd: "static-transparent",
+                  }}
+                  lines={{
+                    display: false,
+                    opacity: 100,
+                    size: "16",
+                    thickness: 1,
+                    angle: 90,
+                    color: "accent-background-strong",
+                  }}
+                  dots={{
+                    display: true,
+                    opacity: 100,
+                    size: "4",
+                    color: "page-background",
+                  }}
+                />
+                <Background
+                  position="absolute"
+                  fill
+                  height={16}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 100,
+                    width: 50,
+                    colorStart: "page-background",
+                    colorEnd: "static-transparent",
+                  }}
+                />
+                <Flex zIndex={1} padding="20" direction="column">
+                  <Badge
+                    id="badge-6"
+                    marginBottom="16"
+                    paddingY="4"
+                    paddingLeft="4"
+                    paddingRight="16"
+                    radius="m"
+                    gap="12"
+                    textVariant="label-default-s"
+                    border="neutral-medium"
+                    background="neutral-alpha-weak"
+                  >
+                    <Tag>
+                      <Icon name="ruby" size="xs" paddingTop="2" margin="0" />
+                    </Tag>
+                    <Text onBackground="neutral-medium" size="m">
+                      Ruby
+                    </Text>
+                  </Badge>
+                  <Column fillWidth gap="16">
+                    <Row>
+                      <Text onBackground="success-medium">Row 1</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 2</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 3</Text>
+                    </Row>
+                  </Column>
+                </Flex>
               </Card>
             </Flex>
           </Row>
           <Row fillWidth gap="16" s={{ direction: "column" }}>
             <Flex flex={2}>
-            <Card
+              <Card
                 fillWidth
-                padding="20"
+                padding="0"
                 background="surface"
                 border="neutral-alpha-weak"
                 radius="l-4"
                 shadow="l"
                 direction="column"
+                position="relative"
+                overflow="hidden"
               >
-                <Badge id="badge-6" marginBottom="16" paddingY="4" paddingLeft="4" paddingRight="16" radius="m" gap="12" textVariant="label-default-s" border="neutral-medium" background="neutral-alpha-weak">
-                  <Tag>
-                    <Icon name="sapphire" size="xs" paddingTop="2" margin="0"/>
-                  </Tag>
-                  <Text onBackground="neutral-medium" size="m">Sapphire Player</Text>
-                </Badge>
-                <Column fillWidth gap="16">
-                <Row>
-                    <Text onBackground="success-medium">Row 1</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 2</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 3</Text>
-                  </Row>
-                </Column>
+                <Background
+                  position="absolute"
+                  fill
+                  fillWidth
+                  fillHeight
+                  data-brand={style.card3color1}
+                  style={cssVars({ '--brand-background-strong': '#ff3040' })}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 0,
+                    colorStart: "brand-background-strong",
+                    colorEnd: "static-transparent",
+                  }}
+                  lines={{
+                    display: false,
+                    opacity: 100,
+                    size: "16",
+                    thickness: 1,
+                    angle: 90,
+                    color: "accent-background-strong",
+                  }}
+                  dots={{
+                    display: true,
+                    opacity: 100,
+                    size: "4",
+                    color: "page-background",
+                  }}
+                />
+                <Background
+                  position="absolute"
+                  fill
+                  height={16}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 100,
+                    width: 50,
+                    colorStart: "page-background",
+                    colorEnd: "static-transparent",
+                  }}
+                />
+                <Flex zIndex={1} padding="20" direction="column">
+                  <Badge
+                    id="badge-6"
+                    marginBottom="16"
+                    paddingY="4"
+                    paddingLeft="4"
+                    paddingRight="16"
+                    radius="m"
+                    gap="12"
+                    textVariant="label-default-s"
+                    border="neutral-medium"
+                    background="neutral-alpha-weak"
+                  >
+                    <Tag>
+                      <Icon name="sapphire" size="xs" paddingTop="2" margin="0" />
+                    </Tag>
+                    <Text onBackground="neutral-medium" size="m">
+                      Sapphire Player
+                    </Text>
+                  </Badge>
+                  <Column fillWidth gap="16">
+                    <Row>
+                      <Text onBackground="success-medium">Row 1</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 2</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 3</Text>
+                    </Row>
+                  </Column>
+                </Flex>
               </Card>
             </Flex>
             <Flex flex={3}>
               <Card
                 fillWidth
-                padding="20"
+                padding="0"
                 background="surface"
                 border="neutral-alpha-weak"
                 radius="l-4"
                 shadow="l"
                 direction="column"
+                position="relative"
+                overflow="hidden"
               >
-                <Badge id="badge-6" marginBottom="16" paddingY="4" paddingLeft="4" paddingRight="16" radius="m" gap="12" textVariant="label-default-s" border="neutral-medium" background="neutral-alpha-weak">
-                  <Tag>
-                    <Icon name="sapphire" size="xs" paddingTop="2" margin="0"/>
-                  </Tag>
-                  <Text onBackground="neutral-medium" size="m">Amethyst</Text>
-                </Badge>
-                <Column fillWidth gap="16">
-                <Row>
-                    <Text onBackground="success-medium">Row 1</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 2</Text>
-                  </Row>
-                  <Row>
-                    <Text onBackground="success-medium">Row 3</Text>
-                  </Row>
-                </Column>
+                <Background
+                  position="absolute"
+                  fill
+                  fillWidth
+                  fillHeight
+                  data-brand={style.card4color1}
+                  style={cssVars({ '--brand-background-strong': '#00d0ff' })}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 0,
+                    colorStart: "brand-background-strong",
+                    colorEnd: "static-transparent",
+                  }}
+                  lines={{
+                    display: false,
+                    opacity: 100,
+                    size: "16",
+                    thickness: 1,
+                    angle: 90,
+                    color: "accent-background-strong",
+                  }}
+                  dots={{
+                    display: true,
+                    opacity: 100,
+                    size: "4",
+                    color: "page-background",
+                  }}
+                />
+                <Background
+                  position="absolute"
+                  fill
+                  height={16}
+                  gradient={{
+                    display: true,
+                    opacity: 100,
+                    x: 50,
+                    y: 100,
+                    width: 50,
+                    colorStart: "page-background",
+                    colorEnd: "static-transparent",
+                  }}
+                />
+                <Flex zIndex={1} padding="20" direction="column">
+                  <Badge
+                    id="badge-6"
+                    marginBottom="16"
+                    paddingY="4"
+                    paddingLeft="4"
+                    paddingRight="16"
+                    radius="m"
+                    gap="12"
+                    textVariant="label-default-s"
+                    border="neutral-medium"
+                    background="neutral-alpha-weak"
+                  >
+                    <Tag>
+                      <Icon name="sapphire" size="xs" paddingTop="2" margin="0" />
+                    </Tag>
+                    <Text onBackground="neutral-medium" size="m">
+                      Amethyst
+                    </Text>
+                  </Badge>
+                  <Column fillWidth gap="16">
+                    <Row>
+                      <Text onBackground="success-medium">Row 1</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 2</Text>
+                    </Row>
+                    <Row>
+                      <Text onBackground="success-medium">Row 3</Text>
+                    </Row>
+                  </Column>
+                </Flex>
               </Card>
             </Flex>
           </Row>
