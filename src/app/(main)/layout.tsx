@@ -150,14 +150,14 @@ export default function RootLayout({
             }}
           />
           <Particle
-            position="absolute"
-            fill
-            interactive
-            speed={3}
-            interactionRadius={20}
-            width={100}
-            height={100}
-          />
+          position="absolute"
+          interactive
+          density={70}
+          size='2'
+          speed={1}
+          interactionRadius={10}
+          opacity={50}
+        />
           {children}
         </Column>
       </Providers>
