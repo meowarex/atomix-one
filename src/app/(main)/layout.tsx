@@ -10,6 +10,7 @@ import { Meta, Schema, Column, Flex, Background, Particle } from "@once-ui-syste
 import type { opacity, SpacingToken } from "@once-ui-system/core";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -151,8 +152,9 @@ export default function RootLayout({
             opacity={50}
           />
           {children}
+          <Footer />
         </Column>
       </Providers>
-    </Flex>
+    </Flex>  
   );
 }
