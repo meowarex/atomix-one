@@ -5,7 +5,7 @@ import '@/resources/custom.css'
 import classNames from "classnames";
 
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
-import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background} from "@once-ui-system/core";
+import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background, Particle} from "@once-ui-system/core";
 import { Providers } from '@/components/Providers';
 
 export async function generateMetadata() {
@@ -107,7 +107,7 @@ export default function RootLayout({
         />
       </head>
       <Providers>
-        <Column as="body" background="page" fillWidth margin="0" padding="0">
+        <Column as="body" background="page" fillWidth margin="0" padding="0" position="relative">
           <Background
             position="absolute"
             mask={{
@@ -148,6 +148,15 @@ export default function RootLayout({
               angle: effects.lines.angle,
               color: effects.lines.color,
             }}
+          />
+          <Particle
+            position="absolute"
+            fill
+            interactive
+            speed={3}
+            interactionRadius={20}
+            width={100}
+            height={100}
           />
           {children}
         </Column>
