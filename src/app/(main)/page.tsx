@@ -65,6 +65,10 @@ export default function Home() {
           <Row fillWidth gap="16" s={{ direction: "column" }}>
             <Flex flex={3}>
               <Card
+                onClick={() => {
+                  window.location.href = "/alkaline";
+                }}
+                style={{ cursor: "pointer" }}
                 fillWidth
                 padding="0"
                 background="surface"
@@ -161,6 +165,10 @@ export default function Home() {
             </Flex>
             <Flex flex={3}>
               <Card
+                onClick={() => {
+                  window.location.href = "/sapphire";
+                }}
+                style={{ cursor: "pointer" }}
                 fillWidth
                 padding="0"
                 background="surface"
@@ -260,6 +268,10 @@ export default function Home() {
           <Row fillWidth gap="16" s={{ direction: "column" }}>
           <Flex flex={3}>
               <Card
+                onClick={() => {
+                  window.location.href = "/ruby";
+                }}
+                style={{ cursor: "pointer" }}
                 fillWidth
                 padding="0"
                 background="surface"
@@ -357,6 +369,10 @@ export default function Home() {
             </Flex>
             <Flex flex={3}>
               <Card
+                onClick={() => {
+                  window.location.href = "/amethyst";
+                }}
+                style={{ cursor: "pointer" }}
                 fillWidth
                 padding="0"
                 background="surface"
