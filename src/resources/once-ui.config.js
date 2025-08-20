@@ -120,7 +120,7 @@ const meta = {
     path: "/",
     title: "Atomix",
     description:
-      "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
+      "Home to meoware.exe",
     image: "/images/og/home.png",
     canonical: "https://atomix.one",
     robots: "index,follow",
