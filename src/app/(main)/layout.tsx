@@ -7,6 +7,7 @@ import classNames from "classnames";
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
 import { Meta, Schema,  Column, Flex, opacity, SpacingToken, Background, Particle} from "@once-ui-system/core";
 import { Providers } from '@/components/Providers';
+import { Header } from '@/components/Header';
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -149,6 +150,8 @@ export default function RootLayout({
               color: effects.lines.color,
             }}
           />
+          <Flex fillWidth minHeight="16" className="s-flex-hide"/>
+          <Header />
           <Particle
           position="absolute"
           interactive

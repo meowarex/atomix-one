@@ -109,13 +109,13 @@ const effects = {
 const meta = {
   home: {
     path: "/",
-    title: "Once UI for Next.js",
+    title: "Atomix",
     description:
       "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
     image: "/images/og/home.jpg",
-    canonical: "https://once-ui.com",
+    canonical: "https://atomix.one",
     robots: "index,follow",
-    alternates: [{ href: "https://once-ui.com", hrefLang: "en" }],
+    alternates: [{ href: "https://atomix.one", hrefLang: "en" }],
   },
   // add more routes and reference them in page.tsx
 };

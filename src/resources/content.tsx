@@ -2,8 +2,6 @@ import { Logo } from "@once-ui-system/core";
 
 type Person = {
   firstName: string;
-  lastName: string;
-  name: string;
   role: string;
   avatar: string;
   email: string;
@@ -14,49 +12,47 @@ type Person = {
 type RouteMeta = { path: string; label: string; title?: string; description?: string };
 
 const person: Person = {
-  firstName: "Atomix",
-  lastName: "One",
-  name: "Atomix One",
-  role: "Design Engineer",
+  firstName: "meoware.exe",
+  role: "Cybersecurity Analyst",
   avatar: "/images/avatar.jpg",
   email: "info@atomix.one",
-  location: "Asia/Jakarta",
+  location: "Australia/Sydney",
   languages: ["English"],
 };
 
 const home: RouteMeta = {
   path: "/",
   label: "Home",
-  title: `${person.name}`,
-  description: `Portfolio website for ${person.name}`,
+  title: `${person.firstName}`,
+  description: `Portfolio website for ${person.firstName}`,
 };
 
 const about: RouteMeta = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `About ${person.name}`,
+  title: `About – ${person.firstName}`,
+  description: `About ${person.firstName}`,
 };
 
 const blog: RouteMeta = {
   path: "/blog",
   label: "Blog",
-  title: `Blog – ${person.name}`,
-  description: `Writing by ${person.name}`,
+  title: `Blog – ${person.firstName}`,
+  description: `Writing by ${person.firstName}`,
 };
 
 const work: RouteMeta = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Projects by ${person.name}`,
+  title: `Projects – ${person.firstName}`,
+  description: `Projects by ${person.firstName}`,
 };
 
 const gallery: RouteMeta = {
   path: "/gallery",
   label: "Gallery",
-  title: `Gallery – ${person.name}`,
-  description: `Photos by ${person.name}`,
+  title: `Gallery – ${person.firstName}`,
+  description: `Photos by ${person.firstName}`,
 };
 
 const routes: Record<string, boolean> = {
