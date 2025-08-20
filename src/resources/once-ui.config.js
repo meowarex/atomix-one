@@ -40,14 +40,14 @@ const fonts = {
 const style = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate
-  brand: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "indigo", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast | inverse
-  solidStyle: "flat", // flat | plastic
+  brand: "pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  solid: "color", // color | contrast | inverse
+  solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative
-  surface: "filled", // filled | translucent
+  surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
-  scaling: "100", // 90 | 95 | 100 | 105 | 110
+  scaling: "110", // 90 | 95 | 100 | 105 | 110
 };
 
 const dataStyle = {
@@ -66,24 +66,24 @@ const dataStyle = {
 
 const effects = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
-    radius: 100,
+    radius: 30,
   },
   gradient: {
-    display: false,
+    display: true,
     x: 50,
     y: 0,
-    width: 100,
-    height: 100,
+    width: 20,
+    height: 15,
     tilt: 0,
     colorStart: "brand-background-strong",
     colorEnd: "static-transparent",
-    opacity: 50,
+    opacity: 100,
   },
   dots: {
-    display: true,
+    display: false,
     size: "2",
     color: "brand-on-background-weak",
     opacity: 40,
@@ -97,11 +97,11 @@ const effects = {
     size: "8",
   },
   grid: {
-    display: false,
+    display: true,
     color: "neutral-alpha-weak",
     opacity: 100,
-    width: "2",
-    height: "2",
+    width: "var(--static-space-32)",
+    height: "var(--static-space-32)",
   },
 };
 
@@ -109,13 +109,13 @@ const effects = {
 const meta = {
   home: {
     path: "/",
-    title: "Once UI for Next.js",
+    title: "Atomix",
     description:
       "An open-source design system and component library for Next.js that emphasizes easy styling and accessibility in UI development.",
     image: "/images/og/home.jpg",
-    canonical: "https://once-ui.com",
+    canonical: "https://atomix.one",
     robots: "index,follow",
-    alternates: [{ href: "https://once-ui.com", hrefLang: "en" }],
+    alternates: [{ href: "https://atomix.one", hrefLang: "en" }],
   },
   // add more routes and reference them in page.tsx
 };
@@ -124,16 +124,15 @@ const meta = {
 const schema = {
   logo: "",
   type: "Organization",
-  name: "Once UI",
+  name: "Atomix",
   description: meta.home.description,
-  email: "lorant@once-ui.com",
+  email: "infoi@atomix.one",
 };
 
 // social links
 const social = {
-  twitter: "https://www.twitter.com/_onceui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  github: "https://github.com/meowarex",
+  email: "info@atomix.one",
 };
 
 export { baseURL, fonts, style, meta, schema, social, effects, dataStyle };
