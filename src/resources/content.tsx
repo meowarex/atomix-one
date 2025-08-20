@@ -55,12 +55,20 @@ const sapphire: RouteMeta = {
   description: `Sapphire by ${person.firstName}`,
 };
 
+const amethyst: RouteMeta = {
+  path: "/amethyst",
+  label: "Amethyst",
+  title: `Amethyst – ${person.firstName}`,
+  description: `Amethyst by ${person.firstName}`,
+};
+
 const routes: Record<string, boolean> = {
   "/": true,
   "/about": true,
   "/alkaline": true,
   "/ruby": true,
   "/sapphire": true,
+  "/amethyst": true,
 };
 
 const display = {
@@ -69,6 +77,6 @@ const display = {
   themeSwitcher: true,
 };
 
-export { person, home, about, alkaline, ruby, sapphire, routes, display };
+export { person, home, about, alkaline, ruby, sapphire, amethyst, routes, display };
 
 

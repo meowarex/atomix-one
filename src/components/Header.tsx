@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, IconButton, Line, Row, StyleOverlay, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, alkaline, ruby, sapphire } from "@/resources";
+import { routes, display, person, about, alkaline, ruby, sapphire, amethyst } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -117,6 +117,17 @@ export const Header = () => {
                     href="/sapphire"
                     label={sapphire.label}
                     selected={pathname.startsWith("/sapphire")}
+                  />
+                </>
+              )}
+              {routes["/amethyst"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="amethyst"
+                    href="/amethyst"
+                    label={amethyst.label}
+                    selected={pathname.startsWith("/amethyst")}
                   />
                 </>
               )}

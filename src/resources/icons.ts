@@ -44,6 +44,7 @@ const HomeBrandIcon = createImageIcon("/images/brand/atomix.png", "Home");
 const AlkalineIcon = createImageIcon("/images/products/alkaline.png", "Alkaline");
 const RubyIcon = createImageIcon("/images/products/alkaline.png", "Ruby");
 const SapphireIcon = createImageIcon("/images/products/sapphire.png", "Sapphire");
+const AmethystIcon = createImageIcon("/images/products/sapphire.png", "Amethyst");
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -72,6 +73,7 @@ export const iconLibrary: Record<string, IconType> = {
   alkaline: AlkalineIcon,
   ruby: RubyIcon,
   sapphire: SapphireIcon,
+  amethyst: AmethystIcon,
 };
 
 export type IconLibrary = typeof iconLibrary;
