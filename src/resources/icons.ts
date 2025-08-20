@@ -1,5 +1,5 @@
 import React from "react";
-import { IconType } from "react-icons";
+import type { IconType, IconBaseProps } from "react-icons";
 
 import {
   HiArrowUpRight,
@@ -26,8 +26,8 @@ import {
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads } from "react-icons/fa6";
 
 // Create image-based icons that integrate with the IconProvider API
-const createImageIcon = (src: string, alt: string): IconType => (props: any) => {
-  const size = typeof props?.size === "number" ? `${props.size}px` : props?.size || "1em";
+const createImageIcon = (src: string, alt: string): IconType => (props: IconBaseProps) => {
+  const size = typeof props?.size === "number" ? `${props.size}px` : (props?.size as string) || "1em";
   return React.createElement("img", {
     src,
     alt,

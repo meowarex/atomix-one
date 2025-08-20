@@ -5,16 +5,9 @@ import "@/resources/custom.css";
 import classNames from "classnames";
 
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
-import {
-  Meta,
-  Schema,
-  Column,
-  Flex,
-  opacity,
-  SpacingToken,
-  Background,
-  Particle,
-} from "@once-ui-system/core";
+import { berkeleyMono } from "@/resources/berkeley-mono";
+import { Meta, Schema, Column, Flex, Background, Particle } from "@once-ui-system/core";
+import type { opacity, SpacingToken } from "@once-ui-system/core";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/Header";
 
@@ -47,6 +40,7 @@ export default function RootLayout({
         fonts.body.variable,
         fonts.label.variable,
         fonts.code.variable,
+        berkeleyMono.variable,
       )}
     >
       <Schema
@@ -57,64 +51,50 @@ export default function RootLayout({
         path={meta.home.path}
       />
       <head>
-        <script
-          id="theme-init"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const root = document.documentElement;
-                  
-                  // Set defaults from config
-                  const config = ${JSON.stringify({
-                    theme: style.theme,
-                    brand: style.brand,
-                    accent: style.accent,
-                    neutral: style.neutral,
-                    solid: style.solid,
-                    "solid-style": style.solidStyle,
-                    border: style.border,
-                    surface: style.surface,
-                    transition: style.transition,
-                    scaling: style.scaling,
-                    "viz-style": dataStyle.variant,
-                  })};
-                  
-                  // Apply default values
-                  Object.entries(config).forEach(([key, value]) => {
+        <script id="theme-init">
+          {`
+            (function() {
+              try {
+                const root = document.documentElement;
+                const config = ${JSON.stringify({
+                  theme: style.theme,
+                  brand: style.brand,
+                  accent: style.accent,
+                  neutral: style.neutral,
+                  solid: style.solid,
+                  "solid-style": style.solidStyle,
+                  border: style.border,
+                  surface: style.surface,
+                  transition: style.transition,
+                  scaling: style.scaling,
+                  "viz-style": dataStyle.variant,
+                })};
+                Object.entries(config).forEach(([key, value]) => {
+                  root.setAttribute('data-' + key, value);
+                });
+                const resolveTheme = (themeValue) => {
+                  if (!themeValue || themeValue === 'system') {
+                    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  }
+                  return themeValue;
+                };
+                const savedTheme = localStorage.getItem('data-theme');
+                const resolvedTheme = savedTheme ? resolveTheme(savedTheme) : config.theme === 'system' ? resolveTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : config.theme;
+                root.setAttribute('data-theme', resolvedTheme);
+                const styleKeys = Object.keys(config);
+                styleKeys.forEach(key => {
+                  const value = localStorage.getItem('data-' + key);
+                  if (value) {
                     root.setAttribute('data-' + key, value);
-                  });
-                  
-                  // Resolve theme
-                  const resolveTheme = (themeValue) => {
-                    if (!themeValue || themeValue === 'system') {
-                      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                    }
-                    return themeValue;
-                  };
-                  
-                  // Apply saved theme or use config default
-                  const savedTheme = localStorage.getItem('data-theme');
-                  // Only override with system preference if explicitly set to 'system'
-                  const resolvedTheme = savedTheme ? resolveTheme(savedTheme) : config.theme === 'system' ? resolveTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : config.theme;
-                  root.setAttribute('data-theme', resolvedTheme);
-                  
-                  // Apply any saved style overrides
-                  const styleKeys = Object.keys(config);
-                  styleKeys.forEach(key => {
-                    const value = localStorage.getItem('data-' + key);
-                    if (value) {
-                      root.setAttribute('data-' + key, value);
-                    }
-                  });
-                } catch (e) {
-                  console.error('Failed to initialize theme:', e);
-                  document.documentElement.setAttribute('data-theme', 'dark');
-                }
-              })();
-            `,
-          }}
-        />
+                  }
+                });
+              } catch (e) {
+                console.error('Failed to initialize theme:', e);
+                document.documentElement.setAttribute('data-theme', 'dark');
+              }
+            })();
+          `}
+        </script>
       </head>
       <Providers>
         <Column as="body" background="page" fillWidth margin="0" padding="0" position="relative">
