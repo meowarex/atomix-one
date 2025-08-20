@@ -14,6 +14,7 @@ import {
   Icon,
   Background,
   Heading,
+  RevealFx,
 } from "@once-ui-system/core";
 import { style } from "@/resources";
 import { berkeleyMono } from "@/resources/berkeley-mono";
@@ -59,6 +60,7 @@ export default function Home() {
             </LetterFx>
           </Text>
         </Badge>
+        <RevealFx>
         <Column fillWidth gap="16">
           <Row fillWidth gap="16" s={{ direction: "column" }}>
             <Flex flex={3}>
@@ -452,6 +454,8 @@ export default function Home() {
             </Flex>
           </Row>
         </Column>
+        </RevealFx>
+        <RevealFx delay={0.2} translateY={0.5} center>
         <Text
           variant="heading-default-xl"
           onBackground="neutral-weak"
@@ -460,6 +464,8 @@ export default function Home() {
         >
           More Projects are on GitHub
         </Text>
+        </RevealFx>
+        <RevealFx delay={0.4} translateY={1} center>
         <Button
           id="github"
           href="https://github.com/meowarex"
@@ -470,6 +476,7 @@ export default function Home() {
         >
           GitHub
         </Button>
+        </RevealFx>
       </Column>
     </Column>
   );
