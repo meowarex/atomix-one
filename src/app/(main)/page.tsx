@@ -20,7 +20,7 @@ import {
 import { style } from "@/resources";
 import { berkeleyMono } from "@/resources/berkeley-mono";
 import type { CSSProperties } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 
 const cssVars = (vars: Record<string, string>): CSSProperties => vars as unknown as CSSProperties;
@@ -33,6 +33,7 @@ const gradientText: CSSProperties = {
 };
 
 export default function Home() {
+  const router = useRouter();
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
       <Heading variant="display-strong-l">
@@ -67,7 +68,7 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                 <Card
                   onClick={() => {
-                    window.location.href = "/alkaline";
+                    router.push("/alkaline");
                   }}
                   style={{ cursor: "pointer" }}
                   fillWidth
@@ -186,7 +187,7 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                 <Card
                   onClick={() => {
-                    window.location.href = "/sapphire";
+                    router.push("/sapphire");
                   }}
                   style={{ cursor: "pointer" }}
                   fillWidth
@@ -305,7 +306,7 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                 <Card
                   onClick={() => {
-                    window.location.href = "/ruby";
+                    router.push("/ruby");
                   }}
                   style={{ cursor: "pointer" }}
                   fillWidth
@@ -422,7 +423,7 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                 <Card 
                   onClick={() => {
-                    window.location.href = "/tidalluna-plugins";
+                    router.push("/tidalluna-plugins");
                   }}
                   style={{ cursor: "pointer" }}
                   fillWidth
