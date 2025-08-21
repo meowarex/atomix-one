@@ -8,6 +8,7 @@ import { Fade, Flex, IconButton, Line, Row, StyleOverlay, ToggleButton } from "@
 import { routes, display, person, about, alkaline, ruby, sapphire, amethyst } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import { tidalluna_plugins } from "@/resources/content";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -112,13 +113,13 @@ export const Header = () => {
                   selected={pathname.startsWith("/sapphire")}
                 />
               )}
-              {routes["/amethyst"] && (
+              {routes["/tidalluna-plugins"] && (
                 <ToggleButton
                   className="s-flex-hide"
-                  prefixIcon="amethyst"
-                  href="/amethyst"
-                  label={amethyst.label}
-                  selected={pathname.startsWith("/amethyst")}
+                  prefixIcon="tidalluna"
+                  href="/tidalluna-plugins"
+                  label={tidalluna_plugins.label}
+                  selected={pathname.startsWith("/tidalluna-plugins")}
                 />
               )}
               {display.themeSwitcher && (
