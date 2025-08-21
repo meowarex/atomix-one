@@ -19,7 +19,8 @@ import {
 } from "@once-ui-system/core";
 import { style } from "@/resources";
 import { berkeleyMono } from "@/resources/berkeley-mono";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ComponentProps } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 
@@ -34,6 +35,23 @@ const gradientText: CSSProperties = {
 
 export default function Home() {
   const router = useRouter();
+  const [isMounted, setIsMounted] = useState(false);
+  const [isFirefox, setIsFirefox] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    if (typeof navigator !== "undefined") {
+      setIsFirefox(/firefox/i.test(navigator.userAgent));
+    }
+  }, []);
+
+  type RevealFxProps = ComponentProps<typeof RevealFx>;
+  const MaybeRevealFx = ({ children, ...rest }: RevealFxProps) => {
+    if (!isMounted || isFirefox) {
+      return <>{children}</>;
+    }
+    return <RevealFx {...rest}>{children}</RevealFx>;
+  };
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
       <Heading variant="display-strong-l">
@@ -61,7 +79,7 @@ export default function Home() {
             </LetterFx>
           </Text>
         </Badge>
-        <RevealFx>
+        <MaybeRevealFx>
           <Column fillWidth gap="16">
             <Row fillWidth gap="16" s={{ direction: "column" }}>
               <Flex flex={3}>
@@ -538,8 +556,8 @@ export default function Home() {
               </Flex>
             </Row>
           </Column>
-        </RevealFx>
-        <RevealFx delay={0.2} translateY={0.5} center>
+        </MaybeRevealFx>
+        <MaybeRevealFx delay={0.2} translateY={0.5} center>
           <Text
             variant="heading-default-xl"
             onBackground="neutral-weak"
@@ -548,8 +566,8 @@ export default function Home() {
           >
             More Projects are on GitHub
           </Text>
-        </RevealFx>
-        <RevealFx delay={0.4} translateY={1} center>
+        </MaybeRevealFx>
+        <MaybeRevealFx delay={0.4} translateY={1} center>
           <Button
             id="github"
             href="https://github.com/meowarex"
@@ -560,7 +578,7 @@ export default function Home() {
           >
             GitHub
           </Button>
-        </RevealFx>
+        </MaybeRevealFx>
       </Column>
     </Column>
   );
