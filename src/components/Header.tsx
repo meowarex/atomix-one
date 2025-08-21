@@ -9,6 +9,7 @@ import { routes, display, person, about, alkaline, ruby, sapphire, amethyst } fr
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 import { tidalluna_plugins } from "@/resources/content";
+import { berkeleyMono } from "@/resources/berkeley-mono";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -61,7 +62,14 @@ export const Header = () => {
         horizontal="center"
       >
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Flex className="s-flex-hide">{person.location}</Flex>}
+          {display.location && (
+            <Flex
+              className={`s-flex-hide ${berkeleyMono.variable}`}
+              style={{ fontFamily: "var(--font-berkeley-mono)" }}
+            >
+              {person.location}
+            </Flex>
+          )}
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
@@ -139,7 +147,12 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex className="s-flex-hide">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            <Flex
+              className={`s-flex-hide ${berkeleyMono.variable}`}
+              style={{ fontFamily: "var(--font-berkeley-mono)" }}
+            >
+              {display.time && <TimeDisplay timeZone={person.location} />}
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
