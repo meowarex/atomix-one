@@ -55,11 +55,11 @@ const sapphire: RouteMeta = {
   description: `Sapphire by ${person.firstName}`,
 };
 
-const amethyst: RouteMeta = {
-  path: "/amethyst",
-  label: "Amethyst",
-  title: `Amethyst – ${person.firstName}`,
-  description: `Amethyst by ${person.firstName}`,
+const tidalluna_plugins: RouteMeta = {
+  path: "/tidalluna-plugins",
+  label: "Tidal Plugins",
+  title: `Tidalluna Plugins – ${person.firstName}`,
+  description: `Tidalluna Plugins by ${person.firstName}`,
 };
 
 const routes: Record<string, boolean> = {
@@ -68,7 +68,7 @@ const routes: Record<string, boolean> = {
   "/alkaline": true,
   "/ruby": true,
   "/sapphire": true,
-  "/amethyst": true,
+  "/tidalluna-plugins": true,
 };
 
 const display = {
@@ -77,6 +77,6 @@ const display = {
   themeSwitcher: true,
 };
 
-export { person, home, about, alkaline, ruby, sapphire, amethyst, routes, display };
+export { person, home, about, alkaline, ruby, sapphire, tidalluna_plugins, routes, display };
 
 

@@ -40,7 +40,7 @@ const fonts = {
 const style = {
   theme: "system", // dark | light | system
   neutral: "gray", // sand | gray | slate
-  brand: "pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  brand:"pink", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "violet", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   // Per-card accent/brand scheme overrides (use with data-accent / data-brand)
   card1color1: "pink",    // accent scheme for card 1

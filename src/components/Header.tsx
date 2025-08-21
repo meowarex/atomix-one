@@ -8,6 +8,8 @@ import { Fade, Flex, IconButton, Line, Row, StyleOverlay, ToggleButton } from "@
 import { routes, display, person, about, alkaline, ruby, sapphire, amethyst } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
+import { tidalluna_plugins } from "@/resources/content";
+import { berkeleyMono } from "@/resources/berkeley-mono";
 
 type TimeDisplayProps = {
   timeZone: string;
@@ -60,7 +62,14 @@ export const Header = () => {
         horizontal="center"
       >
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Flex className="s-flex-hide">{person.location}</Flex>}
+          {display.location && (
+            <Flex
+              className={`s-flex-hide ${berkeleyMono.variable}`}
+              style={{ fontFamily: "var(--font-berkeley-mono)" }}
+            >
+              {person.location}
+            </Flex>
+          )}
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
@@ -112,13 +121,13 @@ export const Header = () => {
                   selected={pathname.startsWith("/sapphire")}
                 />
               )}
-              {routes["/amethyst"] && (
+              {routes["/tidalluna-plugins"] && (
                 <ToggleButton
                   className="s-flex-hide"
-                  prefixIcon="amethyst"
-                  href="/amethyst"
-                  label={amethyst.label}
-                  selected={pathname.startsWith("/amethyst")}
+                  prefixIcon="tidalluna"
+                  href="/tidalluna-plugins"
+                  label={tidalluna_plugins.label}
+                  selected={pathname.startsWith("/tidalluna-plugins")}
                 />
               )}
               {display.themeSwitcher && (
@@ -138,7 +147,12 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex className="s-flex-hide">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            <Flex
+              className={`s-flex-hide ${berkeleyMono.variable}`}
+              style={{ fontFamily: "var(--font-berkeley-mono)" }}
+            >
+              {display.time && <TimeDisplay timeZone={person.location} />}
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
