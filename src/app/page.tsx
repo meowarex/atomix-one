@@ -5,7 +5,6 @@ import {
   Button,
   Column,
   Badge,
-  Line,
   LetterFx,
   Row,
   Card,
@@ -16,17 +15,13 @@ import {
   Heading,
   RevealFx,
   TiltFx,
-  FlipFx,
-  GlitchFx,
   HoloFx,
-  CursorCard,
 } from "@once-ui-system/core";
 import { style } from "@/resources";
 import { berkeleyMono } from "@/resources/berkeley-mono";
 import type { CSSProperties, ComponentProps } from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Header } from "@/components/Header";
 
 const cssVars = (vars: Record<string, string>): CSSProperties => vars as unknown as CSSProperties;
 const gradientText: CSSProperties = {
@@ -602,7 +597,7 @@ export default function Home() {
             </Row>
           </Column>
         </MaybeRevealFx>
-        <MaybeRevealFx delay={0.2} translateY={0.5} center>
+        <RevealFx delay={0.2} translateY={0.5} center>
           <Text
             variant="heading-default-xl"
             onBackground="neutral-weak"
@@ -611,8 +606,8 @@ export default function Home() {
           >
             More Projects are on GitHub
           </Text>
-        </MaybeRevealFx>
-        <MaybeRevealFx delay={0.4} translateY={1} center>
+        </RevealFx>
+        <RevealFx delay={0.4} translateY={1} center>
           <Button
             id="github"
             href="https://github.com/meowarex"
@@ -623,7 +618,7 @@ export default function Home() {
           >
             GitHub
           </Button>
-        </MaybeRevealFx>
+        </RevealFx>
       </Column>
     </Column>
   );

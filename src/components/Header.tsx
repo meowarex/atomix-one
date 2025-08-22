@@ -3,9 +3,9 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { Fade, Flex, IconButton, Line, Row, StyleOverlay, ToggleButton } from "@once-ui-system/core";
+import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, alkaline, ruby, sapphire, tidalluna_plugins } from "@/resources";
+import { routes, display, person, alkaline, ruby, sapphire, tidalluna_plugins } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 import { berkeleyMono } from "@/resources/berkeley-mono";
