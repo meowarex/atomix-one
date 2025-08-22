@@ -22,6 +22,7 @@ import { berkeleyMono } from "@/resources/berkeley-mono";
 import type { CSSProperties, ComponentProps } from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Footer } from "@/components/Footer";
 
 const cssVars = (vars: Record<string, string>): CSSProperties => vars as unknown as CSSProperties;
 const gradientText: CSSProperties = {

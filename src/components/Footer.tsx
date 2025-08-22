@@ -3,8 +3,12 @@
 import { Flex, IconButton, SmartLink, Text } from "@once-ui-system/core";
 import { person, social } from "@/resources";
 import styles from "./Footer.module.scss";
+import { usePathname } from "next/navigation";
 
 export const Footer = () => {
+  const pathname = usePathname();
+  if (pathname !== "/") return null;
+
   const currentYear = new Date().getFullYear();
   const socialItems = [
     { name: "GitHub", link: social.github, icon: "github" as const },

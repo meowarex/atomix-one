@@ -1,10 +1,11 @@
 "use client";
 
-import { Background, Badge, Column, Heading, Row, Tag, Text } from "@once-ui-system/core";
+import { Background, Badge, Column, Heading, RevealFx, Row, Text } from "@once-ui-system/core";
 
 export default function AlkalinePage() {
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
+      <RevealFx position="absolute" fill overflow="hidden">
       <Row position="absolute" fill overflow="hidden">
         <Background
           fill
@@ -43,18 +44,31 @@ export default function AlkalinePage() {
           }}
         />
       </Row>
+      </RevealFx>
       <Column maxWidth="s" horizontal="center" gap="m" align="center">
-        <Row horizontal="around">
-          <Badge>
-            <Heading variant="display-strong-l">Coming 2026</Heading>
-          </Badge>
-        </Row>
-        <Heading variant="display-strong-l">Alkaline</Heading>
-        <Text onBackground="neutral-weak" wrap="balance">
-          Alkaline is being rewritten in WinUI3
-          <br />
-          due to the deprecation of the WPF UI Framework.
-        </Text>
+        <RevealFx horizontal="center">
+          <Row horizontal="around">
+            <Badge>
+              <Heading variant="display-strong-l">Coming 2026</Heading>
+            </Badge>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.2}>
+          <Row>
+            <Heading variant="display-strong-l">Alkaline</Heading>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.4}>
+          <Row>
+            <Text onBackground="neutral-weak" wrap="balance">
+              Alkaline is being rewritten in WinUI3
+              <br />
+              due to the deprecation of the WPF UI Framework.
+            </Text>
+          </Row>
+        </RevealFx>
       </Column>
     </Column>
   );
