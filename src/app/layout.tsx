@@ -152,7 +152,7 @@ export default function RootLayout({
             opacity={50}
           />
           {children}
-          <Footer />
+          <Footer/>
         </Column>
       </Providers>
     </Flex>  

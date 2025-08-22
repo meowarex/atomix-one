@@ -1,10 +1,11 @@
 "use client";
 
-import { Background, Badge, Column, Heading, Row, Text } from "@once-ui-system/core";
+import { Background, Badge, Column, Heading, RevealFx, Row, Text } from "@once-ui-system/core";
 
 export default function RubyPage() {
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
+      <RevealFx position="absolute" fill overflow="hidden">
       <Row position="absolute" fill overflow="hidden">
         <Background
           fill
@@ -43,18 +44,31 @@ export default function RubyPage() {
           }}
         />
       </Row>
+      </RevealFx>
       <Column maxWidth="s" horizontal="center" gap="m" align="center">
-        <Row horizontal="around">
-          <Badge>
-            <Heading variant="display-strong-l">Coming 2025</Heading>
-          </Badge>
-        </Row>
-        <Heading variant="display-strong-l">Ruby</Heading>
-        <Text onBackground="neutral-weak" wrap="balance">
-          Ruby is being written in Next.js and Tauri
-          <br />
-          It is a work in progress and will be available soon
-        </Text>
+        <RevealFx horizontal="center">
+          <Row horizontal="around">
+            <Badge>
+              <Heading variant="display-strong-l">Coming 2025</Heading>
+            </Badge>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.2}>
+          <Row>
+            <Heading variant="display-strong-l">Ruby</Heading>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.4}>
+          <Row>
+            <Text onBackground="neutral-weak" wrap="balance">
+              Ruby is being written in Next.js and Tauri
+              <br />
+              It is a work in progress and will be available soon
+            </Text>
+          </Row>
+        </RevealFx>
       </Column>
     </Column>
   );

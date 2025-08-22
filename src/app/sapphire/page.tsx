@@ -1,10 +1,11 @@
 "use client";
 
-import { Background, Badge, Column, Heading, Mask, Particle, Row, Text } from "@once-ui-system/core";
+import { Background, Badge, Button, Column, Heading, Mask, Particle, RevealFx, Row, Text } from "@once-ui-system/core";
 
 export default function SapphirePage() {
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
+      <RevealFx position="absolute" fill overflow="hidden">
       <Row position="absolute" fill overflow="hidden">
         <Background
           fill
@@ -37,18 +38,46 @@ export default function SapphirePage() {
           }}
         />
       </Row>
+      </RevealFx>
       <Column maxWidth="s" horizontal="center" gap="m" align="center">
-        <Row horizontal="around">
-          <Badge>
-            <Heading variant="display-strong-l">Coming 2026</Heading>
-          </Badge>
-        </Row>
-        <Heading variant="display-strong-l">Sapphire</Heading>
-        <Text onBackground="neutral-weak" wrap="balance">
-          Sapphire is currently archived
-          <br />
-          It is being rewritten in Next.js and Tauri
-        </Text>
+        <RevealFx horizontal="center">
+          <Row horizontal="around">
+            <Badge>
+              <Heading variant="display-strong-l">Coming 2026</Heading>
+            </Badge>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.2}>
+          <Row>
+            <Heading variant="display-strong-l">Sapphire Player</Heading>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.4}>
+          <Row>
+            <Text onBackground="neutral-weak" wrap="balance">
+              Sapphire Player is currently archived
+              <br />
+              It is being rewritten in Next.js and Tauri
+            </Text>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.6}>
+          <Row>
+            <Button
+              id="github"
+              href="https://github.com/meowarex/Sapphire-Player"
+              data-border="rounded"
+              weight="default"
+              prefixIcon="github"
+              arrowIcon
+            >
+              Archived Repository
+            </Button>
+          </Row>
+        </RevealFx>
       </Column>
     </Column>
   );

@@ -1,15 +1,17 @@
 "use client";
 
-import { Background, Badge, Column, Heading, Row, Tag, Text } from "@once-ui-system/core";
+import { Background, Badge, Column, Heading, RevealFx, Row, Text } from "@once-ui-system/core";
+import type { CSSProperties } from "react";
 
 export default function AlkalinePage() {
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
+      <RevealFx position="absolute" fill overflow="hidden">
       <Row position="absolute" fill overflow="hidden">
         <Background
           fill
           data-solid="color"
-          style={{ "--brand-solid-strong": "#de008e" } as React.CSSProperties}
+          style={{ "--brand-solid-strong": "#de008e" } as CSSProperties}
           gradient={{
             display: true,
             x: 50,
@@ -30,7 +32,7 @@ export default function AlkalinePage() {
               filter: "blur(1rem)",
               transform: "scale(1.1)",
               "--brand-on-background-strong": "#de008e",
-            } as React.CSSProperties
+            } as CSSProperties
           }
           gradient={{
             display: true,
@@ -43,18 +45,31 @@ export default function AlkalinePage() {
           }}
         />
       </Row>
+      </RevealFx>
       <Column maxWidth="s" horizontal="center" gap="m" align="center">
-        <Row horizontal="around">
-          <Badge>
-            <Heading variant="display-strong-l">Coming 2026</Heading>
-          </Badge>
-        </Row>
-        <Heading variant="display-strong-l">Alkaline</Heading>
-        <Text onBackground="neutral-weak" wrap="balance">
-          Alkaline is being rewritten in WinUI3
-          <br />
-          due to the deprecation of the WPF UI Framework.
-        </Text>
+        <RevealFx horizontal="center">
+          <Row horizontal="around">
+            <Badge>
+              <Heading variant="display-strong-l">Coming 2026</Heading>
+            </Badge>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.2}>
+          <Row>
+            <Heading variant="display-strong-l">Alkaline</Heading>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.4}>
+          <Row>
+            <Text onBackground="neutral-weak" wrap="balance">
+              Alkaline is being rewritten in WinUI3
+              <br />
+              due to the deprecation of the WPF UI Framework.
+            </Text>
+          </Row>
+        </RevealFx>
       </Column>
     </Column>
   );

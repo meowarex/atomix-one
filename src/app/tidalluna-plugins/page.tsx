@@ -12,11 +12,15 @@ import {
   Badge,
   Text,
   Button,
+  RevealFx,
+  Icon,
 } from "@once-ui-system/core";
+import Link from "next/link";
 
 export default function TidalPluginsPage() {
   return (
     <Column fillWidth center padding="0" gap="128" style={{ minHeight: "100vh" }}>
+      <RevealFx position="absolute" fill overflow="hidden">
       <Row position="absolute" fill overflow="hidden">
         <Background
           fill
@@ -55,27 +59,44 @@ export default function TidalPluginsPage() {
           }}
         />
       </Row>
-
+      </RevealFx>
       <Column maxWidth="s" horizontal="center" gap="m" align="center">
-      <Row>
-        <Tag>
-          <Heading variant="display-strong-l">Page Incomplete</Heading>
-        </Tag>
-      </Row>
-        <Heading variant="display-strong-l">TidalLuna Plugins</Heading>
-        <Text onBackground="neutral-weak" wrap="balance">
-          TidalLuna Plugins are available on the GitHub
-        </Text>
-        <Button
-            id="Repository"
-            href="https://github.com/meowarex/tidal-luna-plugins"
-            data-border="rounded"
-            weight="default"
-            prefixIcon="github"
-            arrowIcon
-          >
-            Repository
-          </Button>
+        <RevealFx horizontal="center">
+          <Row horizontal="around">
+            <Tag>
+              <Heading variant="display-strong-l">Page Incomplete</Heading>
+            </Tag>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.2}>
+          <Row>
+            <Heading variant="display-strong-l">TidalLuna Plugins</Heading>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.4}>
+          <Row>
+            <Text onBackground="neutral-weak" wrap="balance">
+              TidalLuna Plugins are available on the GitHub
+            </Text>
+          </Row>
+        </RevealFx>
+
+        <RevealFx horizontal="center" delay={0.6}>
+          <Row>
+            <Button
+              id="github"
+              href="https://github.com/meowarex/TidalLuna-Plugins"
+              data-border="rounded"
+              weight="default"
+              prefixIcon="github"
+              arrowIcon
+            >
+              Repository
+            </Button>
+          </Row>
+        </RevealFx>
       </Column>
     </Column>
   );
