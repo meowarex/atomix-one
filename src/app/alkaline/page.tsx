@@ -1,6 +1,7 @@
 "use client";
 
 import { Background, Badge, Column, Heading, RevealFx, Row, Text } from "@once-ui-system/core";
+import type { CSSProperties } from "react";
 
 export default function AlkalinePage() {
   return (
@@ -10,7 +11,7 @@ export default function AlkalinePage() {
         <Background
           fill
           data-solid="color"
-          style={{ "--brand-solid-strong": "#de008e" } as React.CSSProperties}
+          style={{ "--brand-solid-strong": "#de008e" } as CSSProperties}
           gradient={{
             display: true,
             x: 50,
@@ -31,7 +32,7 @@ export default function AlkalinePage() {
               filter: "blur(1rem)",
               transform: "scale(1.1)",
               "--brand-on-background-strong": "#de008e",
-            } as React.CSSProperties
+            } as CSSProperties
           }
           gradient={{
             display: true,
