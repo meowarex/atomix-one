@@ -13,6 +13,10 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiCodeBracketSquare,
+  HiCodeBracket,
+  HiMiniCodeBracketSquare,
+  HiMiniCodeBracket,
 } from "react-icons/hi2";
 
 import {
@@ -77,6 +81,10 @@ export const iconLibrary: Record<string, IconType> = {
   sapphire: SapphireIcon,
   amethyst: AmethystIcon,
   tidalluna: TidallunaIcon,
+  forgejo: HiCodeBracketSquare,
+  code: HiCodeBracket,
+  miniCode: HiMiniCodeBracketSquare,
+  miniRCode: HiMiniCodeBracket,
 };
 
 export type IconLibrary = typeof iconLibrary;

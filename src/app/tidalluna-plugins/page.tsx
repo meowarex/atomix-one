@@ -21,44 +21,44 @@ export default function TidalPluginsPage() {
   return (
     <Column fillWidth center padding="0" gap="128" style={{ minHeight: "100vh" }}>
       <RevealFx position="absolute" fill overflow="hidden">
-      <Row position="absolute" fill overflow="hidden">
-        <Background
-          fill
-          data-solid="color"
-          style={{ "--brand-solid-strong": "#9966cc" } as React.CSSProperties}
-          gradient={{
-            display: true,
-            x: 50,
-            y: 100,
-            width: 100,
-            height: 50,
-            colorStart: "brand-solid-strong",
-            colorEnd: "static-transparent",
-          }}
-        />
-        <Background
-          fill
-          position="absolute"
-          bottom="0"
-          left="0"
-          style={
-            {
-              filter: "blur(1rem)",
-              transform: "scale(1.1)",
-              "--brand-on-background-strong": "#9966cc",
-            } as React.CSSProperties
-          }
-          gradient={{
-            display: true,
-            x: 50,
-            y: 100,
-            width: 100,
-            height: 30,
-            colorStart: "brand-on-background-strong",
-            colorEnd: "static-transparent",
-          }}
-        />
-      </Row>
+        <Row position="absolute" fill overflow="hidden">
+          <Background
+            fill
+            data-solid="color"
+            style={{ "--brand-solid-strong": "#9966cc" } as React.CSSProperties}
+            gradient={{
+              display: true,
+              x: 50,
+              y: 100,
+              width: 100,
+              height: 50,
+              colorStart: "brand-solid-strong",
+              colorEnd: "static-transparent",
+            }}
+          />
+          <Background
+            fill
+            position="absolute"
+            bottom="0"
+            left="0"
+            style={
+              {
+                filter: "blur(1rem)",
+                transform: "scale(1.1)",
+                "--brand-on-background-strong": "#9966cc",
+              } as React.CSSProperties
+            }
+            gradient={{
+              display: true,
+              x: 50,
+              y: 100,
+              width: 100,
+              height: 30,
+              colorStart: "brand-on-background-strong",
+              colorEnd: "static-transparent",
+            }}
+          />
+        </Row>
       </RevealFx>
       <Column maxWidth="s" horizontal="center" gap="m" align="center">
         <RevealFx horizontal="center">
@@ -85,16 +85,31 @@ export default function TidalPluginsPage() {
 
         <RevealFx horizontal="center" delay={0.6}>
           <Row>
-            <Button
-              id="github"
-              href="https://github.com/meowarex/TidalLuna-Plugins"
-              data-border="rounded"
-              weight="default"
-              prefixIcon="github"
-              arrowIcon
-            >
-              Repository
-            </Button>
+            <Row data-accent="orange">
+              <Button
+                id="forgejo"
+                href="https://git.atomix.one/meoware.exe/TidalLuna-Plugins"
+                data-border="rounded"
+                weight="default"
+                prefixIcon="forgejo"
+                data-accent="orange"
+                arrowIcon
+              >
+                Forgejo
+              </Button>
+            </Row>
+            <Row marginLeft="m">
+              <Button
+                id="github"
+                href="https://github.com/meowarex/TidalLuna-Plugins"
+                data-border="rounded"
+                weight="default"
+                prefixIcon="github"
+                arrowIcon
+              >
+                Repository
+              </Button>
+            </Row>
           </Row>
         </RevealFx>
       </Column>
