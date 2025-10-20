@@ -63,7 +63,7 @@ export default function RubyPage() {
         <RevealFx horizontal="center" delay={0.4}>
           <Row>
             <Text onBackground="neutral-weak" wrap="balance">
-              Ruby is being written in Next.js and Tauri
+              Ruby is being written in Next.js
               <br />
               It is a work in progress and will be available soon
             </Text>

@@ -422,7 +422,7 @@ export default function Home() {
                           className={berkeleyMono.variable}
                           style={{ fontFamily: "var(--font-berkeley-mono)" }}
                         >
-                          Win | Mac | Linux
+                          Docker
                         </Text>
                       </Tag>
                       <Badge
@@ -452,18 +452,18 @@ export default function Home() {
                             className={berkeleyMono.variable}
                             style={{ fontFamily: "var(--font-berkeley-mono)" }}
                           >
-                            Beautiful Torrent Client/Server
+                            User Friendly IPTV Filter
                           </Text>
                         </Row>
                         <Column gap="0">
                           <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Torrent multiple streams at once"}
+                            {"// Control IPTV Channels and Playlists"}
                           </Text>
                           <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Super easy to use/setup"}
+                            {"// Filter any M3U8 playlist & EPG XML"}
                           </Text>
                           <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Support for remote storage locations"}
+                            {"// Beautiful & intuitive UI"}
                           </Text>
                         </Column>
                       </Column>
