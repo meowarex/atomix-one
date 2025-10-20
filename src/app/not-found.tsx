@@ -54,7 +54,6 @@ export const NotFound: React.FC<React.ComponentProps<typeof Column>> = ({ ...fle
             speed={1}
             size="2"
             density={100}
-            interactionRadius={40}
             pointerEvents="none"
           />
         </Mask>
