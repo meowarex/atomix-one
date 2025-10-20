@@ -148,7 +148,6 @@ export default function RootLayout({
             density={65}
             size="2"
             speed={1}
-            interactionRadius={10}
             opacity={50}
           />
           {children}
