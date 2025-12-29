@@ -104,7 +104,7 @@ export default function Home() {
                     style={{ cursor: "pointer" }}
                     fillWidth
                     padding="0"
-                    background="surface"
+                    background="neutral-weak"
                     border="neutral-alpha-weak"
                     radius="l-4"
                     shadow="l"
@@ -230,7 +230,7 @@ export default function Home() {
                     style={{ cursor: "pointer" }}
                     fillWidth
                     padding="0"
-                    background="surface"
+                    background="neutral-weak"
                     border="neutral-alpha-weak"
                     radius="l-4"
                     shadow="l"
@@ -356,7 +356,7 @@ export default function Home() {
                     style={{ cursor: "pointer" }}
                     fillWidth
                     padding="0"
-                    background="surface"
+                    background="neutral-weak"
                     border="neutral-alpha-weak"
                     radius="l-4"
                     shadow="l"
@@ -480,7 +480,7 @@ export default function Home() {
                     style={{ cursor: "pointer" }}
                     fillWidth
                     padding="0"
-                    background="surface"
+                    background="neutral-weak"
                     border="neutral-alpha-weak"
                     radius="l-4"
                     shadow="l"

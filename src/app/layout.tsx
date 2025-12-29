@@ -6,11 +6,12 @@ import classNames from "classnames";
 
 import { baseURL, meta, fonts, effects, style, dataStyle } from "@/resources/once-ui.config";
 import { berkeleyMono } from "@/resources/berkeley-mono";
-import { Meta, Schema, Column, Flex, Background, Particle } from "@once-ui-system/core";
+import { Meta, Schema, Column, Flex, Background } from "@once-ui-system/core";
 import type { opacity, SpacingToken } from "@once-ui-system/core";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SeasonalEffects } from "@/components/SeasonalEffects";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -142,14 +143,7 @@ export default function RootLayout({
           />
           <Flex fillWidth minHeight="16" className="s-flex-hide" />
           <Header />
-          <Particle
-            position="absolute"
-            interactive
-            density={65}
-            size="2"
-            speed={1}
-            opacity={50}
-          />
+          <SeasonalEffects />
           {children}
           <Footer/>
         </Column>

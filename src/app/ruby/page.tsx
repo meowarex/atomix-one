@@ -49,7 +49,7 @@ export default function RubyPage() {
         <RevealFx horizontal="center">
           <Row horizontal="around">
             <Badge>
-              <Heading variant="display-strong-l">Coming 2025</Heading>
+              <Heading variant="display-strong-l">Coming Q1 2026</Heading>
             </Badge>
           </Row>
         </RevealFx>
