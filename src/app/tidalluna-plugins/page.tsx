@@ -62,47 +62,52 @@ export default function TidalPluginsPage() {
         </Row>
       </RevealFx>
       <Column maxWidth="l" horizontal="center" gap="m" align="center">
-        {/* <RevealFx horizontal="center">
+        <RevealFx horizontal="center">
           <Row horizontal="around">
             <Tag>
               <Heading variant="display-strong-l">Page Incomplete</Heading>
             </Tag>
           </Row>
-        </RevealFx> */}
+        </RevealFx>
+
         <RevealFx horizontal="center" delay={0.2}>
           <Row>
             <Heading variant="display-strong-l">TidalLuna Plugins</Heading>
           </Row>
         </RevealFx>
 
-        <Row width="m" gap="64" vertical="center">
-          <Column fillWidth flex={5} gap="24" align="start">
-            <Heading variant="display-strong-m">Transform Tidal's UI</Heading>
-            <Column gap="12">
-              <Text>• Dynamic Ambient Cover Art</Text>
-              <Text>• Radiant Animated Lyrics</Text>
-              <Text>• Hide UI Elements for a Better Fullscreen Experience</Text>
-              <Text>• Stylised Floating Playerbar</Text>
-            </Column>
-          </Column>
+        <RevealFx delay={0.4}>
+          <Card fillWidth padding="40" radius="l" border="neutral-alpha-weak" className="no-hover-card" background="neutral-weak">
+            <Row fillWidth gap="64" vertical="center">
+              <Column fillWidth flex={5} gap="24" align="start">
+                <Heading variant="display-strong-m">Transform Tidal's UI</Heading>
+                <Column gap="12">
+                  <Text>• Dynamic Ambient Cover Art</Text>
+                  <Text>• Radiant Animated Lyrics</Text>
+                  <Text>• Hide UI Elements for a Better Fullscreen Experience</Text>
+                  <Text>• Stylised Floating Playerbar</Text>
+                </Column>
+              </Column>
 
-          <Column fillWidth flex={5}>
-            <CompareImage
-              radius="xl"
-              //border="neutral-alpha-weak"
-              overflow="hidden"
-              aspectRatio="1087 / 915"
-              leftContent={{
-                src: "/images/products/tidaluna/TidalBeforeLyrics.png",
-                alt: "Tidal Before",
-              }}
-              rightContent={{
-                src: "/images/products/tidaluna/TidalAfterLyrics.png",
-                alt: "Tidal After",
-              }}
-            />
-          </Column>
-        </Row>
+              <Column fillWidth flex={5}>
+                <CompareImage
+                  //radius="l"
+                  //overflow="hidden"
+                  aspectRatio="1087 / 915"
+                  leftContent={{
+                    src: "/images/products/tidaluna/TidalBeforeLyrics.avif",
+                    alt: "Tidal Before",
+                  }}
+                  rightContent={{
+                    src: "/images/products/tidaluna/TidalAfterLyrics.avif",
+                    alt: "Tidal After",
+                  }}
+                />
+              </Column>
+            </Row>
+          </Card>
+        </RevealFx>
+
         <RevealFx horizontal="center" delay={0.4}>
           <Row>
             <Text onBackground="neutral-weak" wrap="balance">
