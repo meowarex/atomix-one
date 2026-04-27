@@ -223,6 +223,132 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                   <Card
                     onClick={() => {
+                      router.push("/kintsugi");
+                    }}
+                    style={{ cursor: "pointer" }}
+                    fillWidth
+                    padding="0"
+                    background="neutral-weak"
+                    border="neutral-alpha-weak"
+                    radius="l-4"
+                    shadow="l"
+                    direction="column"
+                    position="relative"
+                    overflow="hidden"
+                  >
+                    <Background
+                      position="absolute"
+                      fill
+                      fillWidth
+                      fillHeight
+                      data-brand={style.card1color1}
+                      style={cssVars({ "--brand-background-strong": "#ff3040" })}
+                      gradient={{
+                        display: true,
+                        opacity: 100,
+                        x: 50,
+                        y: 0,
+                        colorStart: "brand-background-strong",
+                        colorEnd: "static-transparent",
+                      }}
+                      lines={{
+                        display: false,
+                        opacity: 100,
+                        size: "16",
+                        thickness: 1,
+                        angle: 90,
+                        color: "accent-background-strong",
+                      }}
+                      dots={{
+                        display: true,
+                        opacity: 100,
+                        size: "4",
+                        color: "page-background",
+                      }}
+                    />
+                    <Background
+                      position="absolute"
+                      fill
+                      height={16}
+                      gradient={{
+                        display: true,
+                        opacity: 100,
+                        x: 50,
+                        y: 100,
+                        width: 50,
+                        colorStart: "page-background",
+                        colorEnd: "static-transparent",
+                      }}
+                    />
+                    <Flex zIndex={1} padding="20" direction="column">
+                      <Tag
+                        position="absolute"
+                        top="8"
+                        right="8"
+                        paddingX="8"
+                        paddingY="4"
+                        radius="m"
+                      >
+                        <Text
+                          variant="code-default-s"
+                          className={berkeleyMono.variable}
+                          style={{ fontFamily: "var(--font-berkeley-mono)" }}
+                        >
+                          Linux
+                        </Text>
+                      </Tag>
+                      <Badge
+                        id="badge-4"
+                        marginBottom="16"
+                        paddingY="4"
+                        paddingLeft="4"
+                        paddingRight="16"
+                        radius="m"
+                        gap="12"
+                        textVariant="label-default-s"
+                        border="neutral-alpha-medium"
+                        onBackground="brand-medium"
+                        background="brand-medium"
+                      >
+                        <Tag>
+                          <Icon name="alkaline" size="xs" paddingTop="2" margin="0" />
+                        </Tag>
+                        <Text onBackground="neutral-medium" size="m">
+                          Kintsugi
+                        </Text>
+                      </Badge>
+                      <Column fillWidth gap="12">
+                        <Row>
+                          <Text
+                            variant="heading-strong-m"
+                            className={berkeleyMono.variable}
+                            style={{ fontFamily: "var(--font-berkeley-mono)" }}
+                          >
+                            A Unified Game Launcher for Linux!
+                          </Text>
+                        </Row>
+                        <Column gap="0">
+                          <Text onBackground="neutral-weak" variant="code-default-m">
+                            {"// Manage Steam, Epic Games, GOG & more"}
+                          </Text>
+                          <Text onBackground="neutral-weak" variant="code-default-m">
+                            {"// Native Linux launcher (no electron)"}
+                          </Text>
+                          <Text onBackground="neutral-weak" variant="code-default-m">
+                            {"// Native Linux UX (KDE & GTK 4)"}
+                          </Text>
+                        </Column>
+                      </Column>
+                    </Flex>
+                  </Card>
+                </TiltFx>
+              </Flex>
+            </Row>
+            <Row fillWidth gap="16" s={{ direction: "column" }}>
+            <Flex flex={3}>
+                <TiltFx fillWidth radius="l">
+                  <Card
+                    onClick={() => {
                       router.push("/tidalluna-plugins");
                     }}
                     style={{ cursor: "pointer" }}
@@ -334,134 +460,8 @@ export default function Home() {
                           <Text onBackground="neutral-weak" variant="code-default-m">
                             {"// Custom Themes, animations and effects"}
                           </Text>
-                          <Text onBackground="neutral-weak" variant="code-default-m">
+                          <Text onBackground="neutral-weak" variant="code-cdefault-m">
                             {"// Settings for almost everything!"}
-                          </Text>
-                        </Column>
-                      </Column>
-                    </Flex>
-                  </Card>
-                </TiltFx>
-              </Flex>
-            </Row>
-            <Row fillWidth gap="16" s={{ direction: "column" }}>
-              <Flex flex={3}>
-                <TiltFx fillWidth radius="l">
-                  <Card
-                    onClick={() => {
-                      router.push("/kintsugi");
-                    }}
-                    style={{ cursor: "pointer" }}
-                    fillWidth
-                    padding="0"
-                    background="neutral-weak"
-                    border="neutral-alpha-weak"
-                    radius="l-4"
-                    shadow="l"
-                    direction="column"
-                    position="relative"
-                    overflow="hidden"
-                  >
-                    <Background
-                      position="absolute"
-                      fill
-                      fillWidth
-                      fillHeight
-                      data-brand={style.card1color1}
-                      style={cssVars({ "--brand-background-strong": "#ff3040" })}
-                      gradient={{
-                        display: true,
-                        opacity: 100,
-                        x: 50,
-                        y: 0,
-                        colorStart: "brand-background-strong",
-                        colorEnd: "static-transparent",
-                      }}
-                      lines={{
-                        display: false,
-                        opacity: 100,
-                        size: "16",
-                        thickness: 1,
-                        angle: 90,
-                        color: "accent-background-strong",
-                      }}
-                      dots={{
-                        display: true,
-                        opacity: 100,
-                        size: "4",
-                        color: "page-background",
-                      }}
-                    />
-                    <Background
-                      position="absolute"
-                      fill
-                      height={16}
-                      gradient={{
-                        display: true,
-                        opacity: 100,
-                        x: 50,
-                        y: 100,
-                        width: 50,
-                        colorStart: "page-background",
-                        colorEnd: "static-transparent",
-                      }}
-                    />
-                    <Flex zIndex={1} padding="20" direction="column">
-                      <Tag
-                        position="absolute"
-                        top="8"
-                        right="8"
-                        paddingX="8"
-                        paddingY="4"
-                        radius="m"
-                      >
-                        <Text
-                          variant="code-default-s"
-                          className={berkeleyMono.variable}
-                          style={{ fontFamily: "var(--font-berkeley-mono)" }}
-                        >
-                          Linux
-                        </Text>
-                      </Tag>
-                      <Badge
-                        id="badge-4"
-                        marginBottom="16"
-                        paddingY="4"
-                        paddingLeft="4"
-                        paddingRight="16"
-                        radius="m"
-                        gap="12"
-                        textVariant="label-default-s"
-                        border="neutral-alpha-medium"
-                        onBackground="brand-medium"
-                        background="brand-medium"
-                      >
-                        <Tag>
-                          <Icon name="alkaline" size="xs" paddingTop="2" margin="0" />
-                        </Tag>
-                        <Text onBackground="neutral-medium" size="m">
-                          Kintsugi
-                        </Text>
-                      </Badge>
-                      <Column fillWidth gap="12">
-                        <Row>
-                          <Text
-                            variant="heading-strong-m"
-                            className={berkeleyMono.variable}
-                            style={{ fontFamily: "var(--font-berkeley-mono)" }}
-                          >
-                            A Unified Game Launcher for Linux!
-                          </Text>
-                        </Row>
-                        <Column gap="0">
-                          <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Manage Steam, Epic Games, GOG & more"}
-                          </Text>
-                          <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Native Linux launcher experience"}
-                          </Text>
-                          <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Beautiful & intuitive UI"}
                           </Text>
                         </Column>
                       </Column>

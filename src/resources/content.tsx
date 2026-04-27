@@ -34,18 +34,18 @@ const about: RouteMeta = {
   description: `About ${person.firstName}`,
 };
 
-const alkaline: RouteMeta = {
-  path: "/alkaline",
-  label: "Alkaline",
-  title: `Alkaline – ${person.firstName}`,
-  description: `Alkaline by ${person.firstName}`,
+const kintsugi: RouteMeta = {
+  path: "/kintsugi",
+  label: "Kintsugi",
+  title: `Kintsugi – ${person.firstName}`,
+  description: `Kintsugi by ${person.firstName}`,
 };
 
-const ruby: RouteMeta = {
-  path: "/ruby",
-  label: "Ruby",
-  title: `Ruby – ${person.firstName}`,
-  description: `Ruby by ${person.firstName}`,
+const soon: RouteMeta = {
+  path: "/soon",
+  label: "Soon",
+  title: `Coming Soon – ${person.firstName}`,
+  description: "Coming Soon",
 };
 
 const sapphire: RouteMeta = {
@@ -65,8 +65,8 @@ const tidalluna_plugins: RouteMeta = {
 const routes: Record<string, boolean> = {
   "/": true,
   "/about": true,
-  "/alkaline": true,
-  "/ruby": true,
+  "/kintsugi": true,
+  "/soon": false,
   "/sapphire": true,
   "/tidalluna-plugins": true,
 };
@@ -77,6 +77,6 @@ const display = {
   themeSwitcher: true,
 };
 
-export { person, home, about, alkaline, ruby, sapphire, tidalluna_plugins, routes, display };
+export { person, home, about, kintsugi, soon, sapphire, tidalluna_plugins, routes, display };
 
 

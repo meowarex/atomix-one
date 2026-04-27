@@ -3,7 +3,7 @@
 import { Background, Badge, Column, Heading, RevealFx, Row, Text } from "@once-ui-system/core";
 import type { CSSProperties } from "react";
 
-export default function AlkalinePage() {
+export default function KintsugiPage() {
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
       <RevealFx position="absolute" fill overflow="hidden">
@@ -11,7 +11,7 @@ export default function AlkalinePage() {
         <Background
           fill
           data-solid="color"
-          style={{ "--brand-solid-strong": "#de008e" } as CSSProperties}
+          style={{ "--brand-solid-strong": "#ff3040" } as CSSProperties}
           gradient={{
             display: true,
             x: 50,
@@ -31,7 +31,7 @@ export default function AlkalinePage() {
             {
               filter: "blur(1rem)",
               transform: "scale(1.1)",
-              "--brand-on-background-strong": "#de008e",
+              "--brand-on-background-strong": "#ff3040",
             } as CSSProperties
           }
           gradient={{
@@ -50,23 +50,23 @@ export default function AlkalinePage() {
         <RevealFx horizontal="center">
           <Row horizontal="around">
             <Badge>
-              <Heading variant="display-strong-l">Coming 2026</Heading>
+              <Heading variant="display-strong-l">Coming 2027</Heading>
             </Badge>
           </Row>
         </RevealFx>
 
         <RevealFx horizontal="center" delay={0.2}>
           <Row>
-            <Heading variant="display-strong-l">Alkaline</Heading>
+            <Heading variant="display-strong-l">Kintsugi</Heading>
           </Row>
         </RevealFx>
 
         <RevealFx horizontal="center" delay={0.4}>
           <Row>
             <Text onBackground="neutral-weak" wrap="balance">
-              Alkaline is being rewritten in WinUI3
+              A unified game launcher for Linux.
               <br />
-              due to the deprecation of the WPF UI Framework.
+              Manage Steam, Epic Games, GOG &amp; more in one native app.
             </Text>
           </Row>
         </RevealFx>

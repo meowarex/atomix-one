@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, alkaline, ruby, sapphire, tidalluna_plugins } from "@/resources";
+import { routes, display, person, kintsugi, soon, sapphire, tidalluna_plugins } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 import { berkeleyMono } from "@/resources/berkeley-mono";
@@ -93,22 +93,22 @@ export const Header = () => {
                 />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/alkaline"] && (
+              {routes["/kintsugi"] && (
                 <ToggleButton
                   className="s-flex-hide"
                   prefixIcon="alkaline"
-                  href="/alkaline"
-                  label={alkaline.label}
-                  selected={pathname.startsWith("/alkaline")}
+                  href="/kintsugi"
+                  label={kintsugi.label}
+                  selected={pathname.startsWith("/kintsugi")}
                 />
               )}
-              {routes["/ruby"] && (
+              {routes["/soon"] && (
                 <ToggleButton
                   className="s-flex-hide"
                   prefixIcon="ruby"
-                  href="/ruby"
-                  label={ruby.label}
-                  selected={pathname.startsWith("/ruby")}
+                  href="/soon"
+                  label={soon.label}
+                  selected={pathname.startsWith("/soon")}
                 />
               )}
               {routes["/sapphire"] && (
