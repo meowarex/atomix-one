@@ -2,7 +2,7 @@
 
 import { Background, Badge, Column, Heading, RevealFx, Row, Text } from "@once-ui-system/core";
 
-export default function RubyPage() {
+export default function SoonPage() {
   return (
     <Column fillWidth center padding="l" gap="128" style={{ minHeight: "100vh" }}>
       <RevealFx position="absolute" fill overflow="hidden">
@@ -10,7 +10,7 @@ export default function RubyPage() {
         <Background
           fill
           data-solid="color"
-          style={{ "--brand-solid-strong": "#ff3040" } as React.CSSProperties}
+          style={{ "--brand-solid-strong": "#3a3a3a" } as React.CSSProperties}
           gradient={{
             display: true,
             x: 50,
@@ -29,8 +29,8 @@ export default function RubyPage() {
           style={
             {
               filter: "blur(1rem)",
-              transform: "scale(1.1)",  
-              "--brand-on-background-strong": "#ff3040",
+              transform: "scale(1.1)",
+              "--brand-on-background-strong": "#3a3a3a",
             } as React.CSSProperties
           }
           gradient={{
@@ -49,23 +49,21 @@ export default function RubyPage() {
         <RevealFx horizontal="center">
           <Row horizontal="around">
             <Badge>
-              <Heading variant="display-strong-l">Coming Q1 2026</Heading>
+              <Heading variant="display-strong-l">TBA</Heading>
             </Badge>
           </Row>
         </RevealFx>
 
         <RevealFx horizontal="center" delay={0.2}>
           <Row>
-            <Heading variant="display-strong-l">Ruby</Heading>
+            <Heading variant="display-strong-l">Coming Soon</Heading>
           </Row>
         </RevealFx>
 
         <RevealFx horizontal="center" delay={0.4}>
           <Row>
             <Text onBackground="neutral-weak" wrap="balance">
-              Ruby is being written in Next.js
-              <br />
-              It is a work in progress and will be available soon
+              Stay tuned, more is on the way.
             </Text>
           </Row>
         </RevealFx>

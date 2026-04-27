@@ -74,14 +74,12 @@ export default function SapphirePage() {
         <RevealFx horizontal="center" delay={0.4}>
           <Row>
             <Text onBackground="neutral-weak" wrap="balance">
-              Sapphire Player is currently archived
-              <br />
-              It is being rewritten in Next.js and Tauri
+              Sapphire Player is being rewritten in Next.js and Tauri
             </Text>
           </Row>
         </RevealFx>
 
-        <RevealFx horizontal="center" delay={0.6}>
+        {/* <RevealFx horizontal="center" delay={0.6}>
           <Row>
             <Row data-accent="orange">
               <Button
@@ -109,7 +107,7 @@ export default function SapphirePage() {
               </Button>
             </Row>
           </Row>
-        </RevealFx>
+        </RevealFx> */}
       </Column>
     </Column>
   );
