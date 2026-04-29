@@ -460,7 +460,7 @@ export default function Home() {
                           <Text onBackground="neutral-weak" variant="code-default-m">
                             {"// Custom Themes, animations and effects"}
                           </Text>
-                          <Text onBackground="neutral-weak" variant="code-cdefault-m">
+                          <Text onBackground="neutral-weak" variant="code-default-m">
                             {"// Settings for almost everything!"}
                           </Text>
                         </Column>
