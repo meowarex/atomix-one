@@ -49,7 +49,7 @@ const AlkalineIcon = createImageIcon("/images/products/alkaline.png", "Alkaline"
 const RubyIcon = createImageIcon("/images/products/alkaline.png", "Ruby");
 const SapphireIcon = createImageIcon("/images/products/sapphire.png", "Sapphire");
 const AmethystIcon = createImageIcon("/images/products/sapphire.png", "Amethyst");
-const TidallunaIcon = createImageIcon("/images/products/tidalluna.png", "Tidalluna");
+const RadiantIcon = createImageIcon("/images/products/radiant.png", "Radiant Lyrics");
 const KintsugiIcon = createImageIcon("/images/products/kintsugi.png", "Kintsugi");
 
 export const iconLibrary: Record<string, IconType> = {
@@ -81,7 +81,7 @@ export const iconLibrary: Record<string, IconType> = {
   ruby: RubyIcon,
   sapphire: SapphireIcon,
   amethyst: AmethystIcon,
-  tidalluna: TidallunaIcon,
+  radiant: RadiantIcon,
   kintsugi: KintsugiIcon,
   forgejo: HiCodeBracketSquare,
   code: HiCodeBracket,

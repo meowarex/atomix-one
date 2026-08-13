@@ -1,7 +1,42 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Particle, WeatherFx } from "@once-ui-system/core";
+
+const InteractiveParticles = () => {
+  const wrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = wrapRef.current?.firstElementChild;
+    if (!container) return;
+
+    const forward = (event: MouseEvent) => {
+      container.dispatchEvent(
+        new MouseEvent("mousemove", {
+          clientX: event.clientX,
+          clientY: event.clientY,
+        }),
+      );
+    };
+
+    window.addEventListener("mousemove", forward, { passive: true });
+    return () => window.removeEventListener("mousemove", forward);
+  }, []);
+
+  return (
+    <div ref={wrapRef} style={{ display: "contents" }}>
+      <Particle
+        position="absolute"
+        interactive
+        pointerEvents="none"
+        density={65}
+        size="2"
+        speed={1}
+        opacity={50}
+      />
+    </div>
+  );
+};
 
 export const SeasonalEffects = () => {
   const [isDecember, setIsDecember] = useState(false);
@@ -67,5 +102,5 @@ export const SeasonalEffects = () => {
     );
   }
 
-  return <Particle position="absolute" interactive density={65} size="2" speed={1} opacity={50} />;
+  return <InteractiveParticles />;
 };

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, kintsugi, soon, sapphire, tidalluna_plugins } from "@/resources";
+import { routes, display, person, kintsugi, soon, sapphire, radiant_lyrics } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 import { berkeleyMono } from "@/resources/berkeley-mono";
@@ -120,13 +120,14 @@ export const Header = () => {
                   selected={pathname.startsWith("/sapphire")}
                 />
               )}
-              {routes["/tidalluna-plugins"] && (
+              {routes["/radiant-lyrics"] && (
                 <ToggleButton
                   className="s-flex-hide"
-                  prefixIcon="tidalluna"
-                  href="/tidalluna-plugins"
-                  label={tidalluna_plugins.label}
-                  selected={pathname.startsWith("/tidalluna-plugins")}
+                  prefixIcon="radiant"
+                  href={radiant_lyrics.path}
+                  label={radiant_lyrics.label}
+                  // never current cause redirect
+                  selected={false}
                 />
               )}
               {display.themeSwitcher && (
@@ -158,5 +159,3 @@ export const Header = () => {
     </>
   );
 };
-
-

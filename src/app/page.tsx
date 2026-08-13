@@ -17,7 +17,7 @@ import {
   TiltFx,
   HoloFx,
 } from "@once-ui-system/core";
-import { style } from "@/resources";
+import { style, radiant_lyrics } from "@/resources";
 import { berkeleyMono } from "@/resources/berkeley-mono";
 import type { CSSProperties, ComponentProps } from "react";
 import { useEffect, useState } from "react";
@@ -25,6 +25,8 @@ import { useRouter } from "next/navigation";
 import { Footer } from "@/components/Footer";
 
 const cssVars = (vars: Record<string, string>): CSSProperties => vars as unknown as CSSProperties;
+
+const RADIANT_SWEEP = "linear-gradient(105deg, #ff2e88 0%, #ff6b35 48%, #7c3aed 100%)";
 const gradientText: CSSProperties = {
   backgroundImage: "linear-gradient(120deg, var(--accent-alpha-strong), var(--brand-alpha-medium))",
   WebkitBackgroundClip: "text",
@@ -349,7 +351,8 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                   <Card
                     onClick={() => {
-                      router.push("/tidalluna-plugins");
+                      // Redirect
+                      window.location.href = radiant_lyrics.path;
                     }}
                     style={{ cursor: "pointer" }}
                     fillWidth
@@ -362,21 +365,24 @@ export default function Home() {
                     position="relative"
                     overflow="hidden"
                   >
+                    <Flex
+                      position="absolute"
+                      fill
+                      pointerEvents="none"
+                      style={{
+                        background: RADIANT_SWEEP,
+                        // Fades out toward the bottom the way the old radial did
+                        maskImage: "linear-gradient(to bottom, black 0%, transparent 88%)",
+                        WebkitMaskImage: "linear-gradient(to bottom, black 0%, transparent 88%)",
+                      }}
+                    />
                     <Background
                       position="absolute"
                       fill
                       fillWidth
                       fillHeight
                       data-brand={style.card4color1}
-                      style={cssVars({ "--brand-background-strong": "#9966cc" })}
-                      gradient={{
-                        display: true,
-                        opacity: 100,
-                        x: 50,
-                        y: 0,
-                        colorStart: "brand-background-strong",
-                        colorEnd: "static-transparent",
-                      }}
+                      gradient={{ display: false }}
                       lines={{
                         display: false,
                         opacity: 100,
@@ -437,10 +443,10 @@ export default function Home() {
                         background="brand-medium"
                       >
                         <Tag>
-                          <Icon name="tidalluna" size="xs" paddingTop="2" margin="0" />
+                          <Icon name="radiant" size="xs" paddingTop="2" margin="0" />
                         </Tag>
                         <Text onBackground="neutral-medium" size="m">
-                          Tidal Plugins
+                          Radiant Lyrics
                         </Text>
                       </Badge>
                       <Column fillWidth gap="16">
@@ -450,7 +456,7 @@ export default function Home() {
                             className={berkeleyMono.variable}
                             style={{ fontFamily: "var(--font-berkeley-mono)" }}
                           >
-                            Plugins/Themes For TidalLuna
+                            Radiant overhaul of the TIDAL UI
                           </Text>
                         </Row>
                         <Column gap="0">
@@ -458,7 +464,7 @@ export default function Home() {
                             {"// Completely transform the Tidal UI"}
                           </Text>
                           <Text onBackground="neutral-weak" variant="code-default-m">
-                            {"// Custom Themes, animations and effects"}
+                            {"// Syllable lyrics & AI"}
                           </Text>
                           <Text onBackground="neutral-weak" variant="code-default-m">
                             {"// Settings for almost everything!"}
