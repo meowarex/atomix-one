@@ -60,7 +60,7 @@ export default function SapphirePage() {
         <RevealFx horizontal="center">
           <Row horizontal="around">
             <Badge>
-              <Heading variant="display-strong-l">Coming 2026</Heading>
+              <Heading variant="display-strong-l">Coming 2027</Heading>
             </Badge>
           </Row>
         </RevealFx>

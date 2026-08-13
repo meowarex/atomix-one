@@ -55,11 +55,12 @@ const sapphire: RouteMeta = {
   description: `Sapphire by ${person.firstName}`,
 };
 
-const tidalluna_plugins: RouteMeta = {
-  path: "/tidalluna-plugins",
-  label: "Tidal Plugins",
-  title: `Tidalluna Plugins – ${person.firstName}`,
-  description: `Tidalluna Plugins by ${person.firstName}`,
+/* I moved Radiant Lyrics to its own site <3 */
+const radiant_lyrics: RouteMeta = {
+  path: "/radiant-lyrics",
+  label: "Radiant Lyrics",
+  title: `Radiant Lyrics – ${person.firstName}`,
+  description: `Radiant Lyrics by ${person.firstName}`,
 };
 
 const routes: Record<string, boolean> = {
@@ -68,7 +69,7 @@ const routes: Record<string, boolean> = {
   "/kintsugi": true,
   "/soon": false,
   "/sapphire": true,
-  "/tidalluna-plugins": true,
+  "/radiant-lyrics": true,
 };
 
 const display = {
@@ -77,6 +78,4 @@ const display = {
   themeSwitcher: true,
 };
 
-export { person, home, about, kintsugi, soon, sapphire, tidalluna_plugins, routes, display };
-
-
+export { person, home, about, kintsugi, soon, sapphire, radiant_lyrics, routes, display };

@@ -50,7 +50,7 @@ export default function KintsugiPage() {
         <RevealFx horizontal="center">
           <Row horizontal="around">
             <Badge>
-              <Heading variant="display-strong-l">Coming 2027</Heading>
+              <Heading variant="display-strong-l">Coming 2026</Heading>
             </Badge>
           </Row>
         </RevealFx>
