@@ -23,6 +23,7 @@ import type { CSSProperties, ComponentProps } from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Footer } from "@/components/Footer";
+import { AXON_PINK } from "@/components/AxonLogo";
 
 const cssVars = (vars: Record<string, string>): CSSProperties => vars as unknown as CSSProperties;
 
@@ -101,7 +102,7 @@ export default function Home() {
                 <TiltFx fillWidth radius="l">
                   <Card
                     onClick={() => {
-                      router.push("/sapphire");
+                      router.push("/axon");
                     }}
                     style={{ cursor: "pointer" }}
                     fillWidth
@@ -120,7 +121,7 @@ export default function Home() {
                       fillWidth
                       fillHeight
                       data-brand={style.card3color1}
-                      style={cssVars({ "--brand-background-strong": "#6a00ff" })}
+                      style={cssVars({ "--brand-background-strong": AXON_PINK })}
                       gradient={{
                         display: true,
                         opacity: 100,
@@ -189,10 +190,10 @@ export default function Home() {
                         background="brand-medium"
                       >
                         <Tag>
-                          <Icon name="sapphire" size="xs" paddingTop="2" margin="0" />
+                          <Icon name="axon" size="xs" paddingTop="2" margin="0" />
                         </Tag>
                         <Text onBackground="neutral-medium" size="m">
-                          Sapphire Player
+                          Axon
                         </Text>
                       </Badge>
                       <Column fillWidth gap="12">
@@ -202,7 +203,7 @@ export default function Home() {
                             className={berkeleyMono.variable}
                             style={{ fontFamily: "var(--font-berkeley-mono)" }}
                           >
-                            Music Player Built in Electron
+                            Music Player Built in Rust
                           </Text>
                         </Row>
                         <Column gap="0">
@@ -313,7 +314,7 @@ export default function Home() {
                         background="brand-medium"
                       >
                         <Tag>
-                          <Icon name="alkaline" size="xs" paddingTop="2" margin="0" />
+                          <Icon name="kintsugi" size="xs" paddingTop="2" margin="0" />
                         </Tag>
                         <Text onBackground="neutral-medium" size="m">
                           Kintsugi

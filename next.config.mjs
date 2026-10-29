@@ -7,7 +7,11 @@ const nextConfig = {
   async redirects() {
     /* I moved Radiant Lyrics to its own site <3 */
     const destination = "https://radiant-lyrics.org";
-    return [{ source: "/radiant-lyrics", destination, permanent: true }];
+    return [
+      { source: "/radiant-lyrics", destination, permanent: true },
+      /* Sapphire was rebranded to Axon <3 */
+      { source: "/sapphire", destination: "/axon", permanent: true },
+    ];
   },
 };
 

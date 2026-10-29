@@ -27,6 +27,8 @@ import {
   PiImageDuotone,
 } from "react-icons/pi";
 
+import { AxonDuo } from "@/components/AxonLogo";
+
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaWindows } from "react-icons/fa6";
 
 // Create image-based icons that integrate with the IconProvider API
@@ -47,8 +49,11 @@ const createImageIcon = (src: string, alt: string): IconType => (props: IconBase
 const atomix = createImageIcon("/images/brand/atomix.png", "Atomix");
 const AlkalineIcon = createImageIcon("/images/products/alkaline.png", "Alkaline");
 const RubyIcon = createImageIcon("/images/products/alkaline.png", "Ruby");
-const SapphireIcon = createImageIcon("/images/products/sapphire.png", "Sapphire");
-const AmethystIcon = createImageIcon("/images/products/sapphire.png", "Amethyst");
+const AxonIcon: IconType = (props: IconBaseProps) => {
+  const size = typeof props?.size === "number" ? `${props.size}px` : (props?.size as string) || "1em";
+  return React.createElement(AxonDuo, { width: size, height: size, style: { display: "inline-block" } });
+};
+const AmethystIcon = createImageIcon("/images/products/axon.png", "Amethyst");
 const RadiantIcon = createImageIcon("/images/products/radiant.png", "Radiant Lyrics");
 const KintsugiIcon = createImageIcon("/images/products/kintsugi.png", "Kintsugi");
 
@@ -79,7 +84,7 @@ export const iconLibrary: Record<string, IconType> = {
   atomix: atomix,
   alkaline: AlkalineIcon,
   ruby: RubyIcon,
-  sapphire: SapphireIcon,
+  axon: AxonIcon,
   amethyst: AmethystIcon,
   radiant: RadiantIcon,
   kintsugi: KintsugiIcon,

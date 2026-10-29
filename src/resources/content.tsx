@@ -48,11 +48,11 @@ const soon: RouteMeta = {
   description: "Coming Soon",
 };
 
-const sapphire: RouteMeta = {
-  path: "/sapphire",
-  label: "Sapphire",
-  title: `Sapphire – ${person.firstName}`,
-  description: `Sapphire by ${person.firstName}`,
+const axon: RouteMeta = {
+  path: "/axon",
+  label: "Axon",
+  title: `Axon – ${person.firstName}`,
+  description: `Axon by ${person.firstName}`,
 };
 
 /* I moved Radiant Lyrics to its own site <3 */
@@ -68,7 +68,7 @@ const routes: Record<string, boolean> = {
   "/about": true,
   "/kintsugi": true,
   "/soon": false,
-  "/sapphire": true,
+  "/axon": true,
   "/radiant-lyrics": true,
 };
 
@@ -78,4 +78,4 @@ const display = {
   themeSwitcher: true,
 };
 
-export { person, home, about, kintsugi, soon, sapphire, radiant_lyrics, routes, display };
+export { person, home, about, kintsugi, soon, axon, radiant_lyrics, routes, display };
